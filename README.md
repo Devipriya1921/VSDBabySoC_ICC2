@@ -968,7 +968,7 @@ Information: Timer using 'CRPR'. (TIM-050)
 ```
 
 * Here the setup time is met but the hold time is not met and is violated. 
-* The hold time has to be set if the IP has to go for tapeout or physical implementation.
+* NOTE : The hold time has to be set if the IP has to go for tapeout or physical implementation.
 
 
 3. Here are some of the other violations snapshots shown below:
@@ -978,6 +978,10 @@ This path shows that the regular buffer in clock path due to inavailability of c
 ![violations-1](https://user-images.githubusercontent.com/83152452/190431132-f5b92aec-0294-482f-bcbe-a276d5d60138.jpeg)
 
 ![violations-2](https://user-images.githubusercontent.com/83152452/190431152-a0119713-c5ca-43f8-92ea-463d6f099fe5.jpeg)
+
+4. Future work would be to integrate the RVMYTH Digital block to PLL and DAC Analog blocks using the LEF Files.
+
+5. The above mentioned violations in point number 1,2 and 3 has be corrected before going for Physical Implementation.
 
 
 # Acknowledgements
