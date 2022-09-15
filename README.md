@@ -968,7 +968,7 @@ Information: Timer using 'CRPR'. (TIM-050)
 ```
 
 * Here the setup time is met but the hold time is not met and is violated. 
-* NOTE : The hold time has to be set if the IP has to go for tapeout or physical implementation.
+* NOTE : The hold time has to be met if the IP has to go for tapeout or physical implementation.
 
 
 3. Here are some of the other violations snapshots shown below:
