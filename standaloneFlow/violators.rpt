@@ -1,0 +1,2411 @@
+[icc2-lic Wed Sep 14 18:04:05 2022] Command 'report_constraints' requires licenses
+[icc2-lic Wed Sep 14 18:04:05 2022] Attempting to check-out main set of keys directly with queueing
+[icc2-lic Wed Sep 14 18:04:05 2022] Sending count request for 'ICCompilerII' 
+[icc2-lic Wed Sep 14 18:04:05 2022] Count request for 'ICCompilerII' returned 1 
+[icc2-lic Wed Sep 14 18:04:05 2022] Sending check-out request for 'ICCompilerII' (1) with wait option
+[icc2-lic Wed Sep 14 18:04:05 2022] Check-out request for 'ICCompilerII' with wait option succeeded
+[icc2-lic Wed Sep 14 18:04:05 2022] Sending checkout check request for 'ICCompilerII' 
+[icc2-lic Wed Sep 14 18:04:05 2022] Checkout check request for 'ICCompilerII' returned 0 
+[icc2-lic Wed Sep 14 18:04:05 2022] Sending count request for 'ICCompilerII' 
+[icc2-lic Wed Sep 14 18:04:05 2022] Count request for 'ICCompilerII' returned 1 
+[icc2-lic Wed Sep 14 18:04:05 2022] Sending count request for 'ICCompilerII-4' 
+[icc2-lic Wed Sep 14 18:04:05 2022] Count request for 'ICCompilerII-4' returned 1 
+[icc2-lic Wed Sep 14 18:04:05 2022] Sending check-out request for 'ICCompilerII-4' (1) with wait option
+[icc2-lic Wed Sep 14 18:04:05 2022] Check-out request for 'ICCompilerII-4' with wait option succeeded
+[icc2-lic Wed Sep 14 18:04:05 2022] Sending checkout check request for 'ICCompilerII-4' 
+[icc2-lic Wed Sep 14 18:04:05 2022] Checkout check request for 'ICCompilerII-4' returned 0 
+[icc2-lic Wed Sep 14 18:04:05 2022] Sending count request for 'ICCompilerII-4' 
+[icc2-lic Wed Sep 14 18:04:05 2022] Count request for 'ICCompilerII-4' returned 1 
+[icc2-lic Wed Sep 14 18:04:05 2022] Check-out of main set of keys directly with queueing was successful
+[icc2-lic Wed Sep 14 18:04:05 2022] Attempting to check-out main set of keys directly with queueing
+[icc2-lic Wed Sep 14 18:04:05 2022] Sending count request for 'ICCompilerII' 
+[icc2-lic Wed Sep 14 18:04:05 2022] Count request for 'ICCompilerII' returned 1 
+[icc2-lic Wed Sep 14 18:04:05 2022] Sending check-out request for 'ICCompilerII' (1) with wait option
+[icc2-lic Wed Sep 14 18:04:05 2022] Check-out request for 'ICCompilerII' with wait option succeeded
+[icc2-lic Wed Sep 14 18:04:05 2022] Sending checkout check request for 'ICCompilerII' 
+[icc2-lic Wed Sep 14 18:04:05 2022] Checkout check request for 'ICCompilerII' returned 0 
+[icc2-lic Wed Sep 14 18:04:05 2022] Sending count request for 'ICCompilerII' 
+[icc2-lic Wed Sep 14 18:04:05 2022] Count request for 'ICCompilerII' returned 1 
+[icc2-lic Wed Sep 14 18:04:05 2022] Sending count request for 'ICCompilerII-4' 
+[icc2-lic Wed Sep 14 18:04:05 2022] Count request for 'ICCompilerII-4' returned 1 
+[icc2-lic Wed Sep 14 18:04:05 2022] Sending check-out request for 'ICCompilerII-4' (1) with wait option
+[icc2-lic Wed Sep 14 18:04:05 2022] Check-out request for 'ICCompilerII-4' with wait option succeeded
+[icc2-lic Wed Sep 14 18:04:05 2022] Sending checkout check request for 'ICCompilerII-4' 
+[icc2-lic Wed Sep 14 18:04:05 2022] Checkout check request for 'ICCompilerII-4' returned 0 
+[icc2-lic Wed Sep 14 18:04:05 2022] Sending count request for 'ICCompilerII-4' 
+[icc2-lic Wed Sep 14 18:04:05 2022] Count request for 'ICCompilerII-4' returned 1 
+[icc2-lic Wed Sep 14 18:04:05 2022] Check-out of main set of keys directly with queueing was successful
+****************************************
+Report : constraint
+        -verbose
+        -all_violators
+Design : vsdbabysoc_1
+Version: T-2022.03
+Date   : Wed Sep 14 18:04:05 2022
+****************************************
+
+   late_timing
+   -----------
+
+Information: Timer using 'CRPR'. (TIM-050)
+No paths.
+
+   early_timing
+   -----------
+
+Information: Timer using 'CRPR'. (TIM-050)
+
+  Startpoint: core/CPU_imm_a2_reg[31] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_imm_a3_reg[31] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1474    0.1474
+
+  core/CPU_imm_a2_reg[31]/CK (DFF_X1)              0.0000    0.1474 r
+  core/CPU_imm_a2_reg[31]/Q (DFF_X1)               0.1038    0.2512 r
+  core/CPU_imm_a3_reg[31]/D (DFF_X1)               0.0004    0.2516 r
+  data arrival time                                          0.2516
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1631    0.1631
+  clock reconvergence pessimism                   -0.0035    0.1596
+  core/CPU_imm_a3_reg[31]/CK (DFF_X1)              0.0000    0.1596 r
+  clock uncertainty                                0.1000    0.2596
+  library hold time                                0.0195    0.2791
+  data required time                                         0.2791
+  --------------------------------------------------------------------------
+  data required time                                         0.2791
+  data arrival time                                         -0.2516
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0275
+
+
+
+  Startpoint: core/CPU_imm_a2_reg[19] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_imm_a3_reg[19] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1731    0.1731
+
+  core/CPU_imm_a2_reg[19]/CK (DFF_X1)              0.0000    0.1731 r
+  core/CPU_imm_a2_reg[19]/Q (DFF_X1)               0.1182    0.2913 r
+  core/CPU_imm_a3_reg[19]/D (DFF_X1)               0.0011    0.2924 r
+  data arrival time                                          0.2924
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1983    0.1983
+  clock reconvergence pessimism                   -0.0054    0.1929
+  core/CPU_imm_a3_reg[19]/CK (DFF_X1)              0.0000    0.1929 r
+  clock uncertainty                                0.1000    0.2929
+  library hold time                                0.0244    0.3174
+  data required time                                         0.3174
+  --------------------------------------------------------------------------
+  data required time                                         0.3174
+  data arrival time                                         -0.2924
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0250
+
+
+
+  Startpoint: core/CPU_imm_a2_reg[6] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_imm_a3_reg[6] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1759    0.1759
+
+  core/CPU_imm_a2_reg[6]/CK (DFF_X1)               0.0000    0.1759 r
+  core/CPU_imm_a2_reg[6]/Q (DFF_X1)                0.1041    0.2800 r
+  core/CPU_imm_a3_reg[6]/D (DFF_X1)                0.0006    0.2806 r
+  data arrival time                                          0.2806
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1890    0.1890
+  clock reconvergence pessimism                   -0.0034    0.1857
+  core/CPU_imm_a3_reg[6]/CK (DFF_X1)               0.0000    0.1857 r
+  clock uncertainty                                0.1000    0.2857
+  library hold time                                0.0196    0.3052
+  data required time                                         0.3052
+  --------------------------------------------------------------------------
+  data required time                                         0.3052
+  data arrival time                                         -0.2806
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0246
+
+
+
+  Startpoint: core/CPU_imm_a2_reg[7] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_imm_a3_reg[7] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1719    0.1719
+
+  core/CPU_imm_a2_reg[7]/CK (DFF_X1)               0.0000    0.1719 r
+  core/CPU_imm_a2_reg[7]/Q (DFF_X1)                0.1227    0.2946 r
+  core/CPU_imm_a3_reg[7]/D (DFF_X1)                0.0031    0.2977 r
+  data arrival time                                          0.2977
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.2002    0.2002
+  clock reconvergence pessimism                   -0.0054    0.1948
+  core/CPU_imm_a3_reg[7]/CK (DFF_X1)               0.0000    0.1948 r
+  clock uncertainty                                0.1000    0.2948
+  library hold time                                0.0266    0.3214
+  data required time                                         0.3214
+  --------------------------------------------------------------------------
+  data required time                                         0.3214
+  data arrival time                                         -0.2977
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0237
+
+
+
+  Startpoint: core/CPU_imm_a2_reg[23] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_imm_a3_reg[23] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1750    0.1750
+
+  core/CPU_imm_a2_reg[23]/CK (DFF_X1)              0.0000    0.1750 r
+  core/CPU_imm_a2_reg[23]/Q (DFF_X1)               0.1257    0.3007 r
+  core/CPU_imm_a3_reg[23]/D (DFF_X1)               0.0055    0.3061 r
+  data arrival time                                          0.3061
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.2061    0.2061
+  clock reconvergence pessimism                   -0.0054    0.2007
+  core/CPU_imm_a3_reg[23]/CK (DFF_X1)              0.0000    0.2007 r
+  clock uncertainty                                0.1000    0.3007
+  library hold time                                0.0283    0.3290
+  data required time                                         0.3290
+  --------------------------------------------------------------------------
+  data required time                                         0.3290
+  data arrival time                                         -0.3061
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0228
+
+
+
+  Startpoint: core/CPU_rd_valid_a2_reg (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_rd_valid_a3_reg (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1567    0.1567
+
+  core/CPU_rd_valid_a2_reg/CK (DFF_X1)             0.0000    0.1567 r
+  core/CPU_rd_valid_a2_reg/Q (DFF_X1)              0.1054    0.2621 r
+  core/CPU_rd_valid_a3_reg/D (DFF_X1)              0.0008    0.2629 r
+  data arrival time                                          0.2629
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1686    0.1686
+  clock reconvergence pessimism                   -0.0035    0.1651
+  core/CPU_rd_valid_a3_reg/CK (DFF_X1)             0.0000    0.1651 r
+  clock uncertainty                                0.1000    0.2651
+  library hold time                                0.0199    0.2850
+  data required time                                         0.2850
+  --------------------------------------------------------------------------
+  data required time                                         0.2850
+  data arrival time                                         -0.2629
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0222
+
+
+
+  Startpoint: core/CPU_imm_a2_reg[22] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_imm_a3_reg[22] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1731    0.1731
+
+  core/CPU_imm_a2_reg[22]/CK (DFF_X1)              0.0000    0.1731 r
+  core/CPU_imm_a2_reg[22]/Q (DFF_X1)               0.1012    0.2743 r
+  core/CPU_imm_a3_reg[22]/D (DFF_X1)               0.0002    0.2745 r
+  data arrival time                                          0.2745
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1793    0.1793
+  clock reconvergence pessimism                   -0.0034    0.1759
+  core/CPU_imm_a3_reg[22]/CK (DFF_X1)              0.0000    0.1759 r
+  clock uncertainty                                0.1000    0.2759
+  library hold time                                0.0188    0.2947
+  data required time                                         0.2947
+  --------------------------------------------------------------------------
+  data required time                                         0.2947
+  data arrival time                                         -0.2745
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0202
+
+
+
+  Startpoint: core/CPU_imem_rd_addr_a1_reg[2] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_pc_a2_reg[4] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1541    0.1541
+
+  core/CPU_imem_rd_addr_a1_reg[2]/CK (DFF_X1)      0.0000    0.1541 r
+  core/CPU_imem_rd_addr_a1_reg[2]/Q (DFF_X1)       0.1424    0.2964 f
+  core/CPU_pc_a2_reg[4]/D (DFF_X1)                 0.0093    0.3057 f
+  data arrival time                                          0.3057
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.2011    0.2011
+  clock reconvergence pessimism                   -0.0054    0.1957
+  core/CPU_pc_a2_reg[4]/CK (DFF_X1)                0.0000    0.1957 r
+  clock uncertainty                                0.1000    0.2957
+  library hold time                                0.0301    0.3257
+  data required time                                         0.3257
+  --------------------------------------------------------------------------
+  data required time                                         0.3257
+  data arrival time                                         -0.3057
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0200
+
+
+
+  Startpoint: core/CPU_Xreg_value_a5_reg[17][5] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/OUT_reg[5] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1533    0.1533
+
+  core/CPU_Xreg_value_a5_reg[17][5]/CK (DFF_X1)    0.0000    0.1533 r
+  core/CPU_Xreg_value_a5_reg[17][5]/Q (DFF_X1)     0.1247    0.2780 r
+  core/OUT_reg[5]/D (DFF_X2)                       0.0031    0.2811 r
+  data arrival time                                          0.2811
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1800    0.1800
+  clock reconvergence pessimism                   -0.0054    0.1746
+  core/OUT_reg[5]/CK (DFF_X2)                      0.0000    0.1746 r
+  clock uncertainty                                0.1000    0.2746
+  library hold time                                0.0256    0.3001
+  data required time                                         0.3001
+  --------------------------------------------------------------------------
+  data required time                                         0.3001
+  data arrival time                                         -0.2811
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0191
+
+
+
+  Startpoint: core/CPU_imm_a2_reg[28] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_imm_a3_reg[28] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1766    0.1766
+
+  core/CPU_imm_a2_reg[28]/CK (DFF_X1)              0.0000    0.1766 r
+  core/CPU_imm_a2_reg[28]/Q (DFF_X1)               0.1183    0.2949 r
+  core/CPU_imm_a3_reg[28]/D (DFF_X1)               0.0036    0.2985 r
+  data arrival time                                          0.2985
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1951    0.1951
+  clock reconvergence pessimism                   -0.0054    0.1897
+  core/CPU_imm_a3_reg[28]/CK (DFF_X1)              0.0000    0.1897 r
+  clock uncertainty                                0.1000    0.2897
+  library hold time                                0.0252    0.3150
+  data required time                                         0.3150
+  --------------------------------------------------------------------------
+  data required time                                         0.3150
+  data arrival time                                         -0.2985
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0164
+
+
+
+  Startpoint: core/CPU_reset_a2_reg (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_reset_a3_reg (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1917    0.1917
+
+  core/CPU_reset_a2_reg/CK (DFF_X1)                0.0000    0.1917 r
+  core/CPU_reset_a2_reg/Q (DFF_X1)                 0.1122    0.3039 r
+  core/CPU_reset_a3_reg/D (DFF_X2)                 0.0013    0.3052 r
+  data arrival time                                          0.3052
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.2011    0.2011
+  clock reconvergence pessimism                   -0.0034    0.1977
+  core/CPU_reset_a3_reg/CK (DFF_X2)                0.0000    0.1977 r
+  clock uncertainty                                0.1000    0.2977
+  library hold time                                0.0215    0.3192
+  data required time                                         0.3192
+  --------------------------------------------------------------------------
+  data required time                                         0.3192
+  data arrival time                                         -0.3052
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0140
+
+
+
+  Startpoint: core/CPU_imm_a2_reg[12] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_imm_a3_reg[12] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1727    0.1727
+
+  core/CPU_imm_a2_reg[12]/CK (DFF_X1)              0.0000    0.1727 r
+  core/CPU_imm_a2_reg[12]/Q (DFF_X1)               0.1370    0.3097 r
+  core/CPU_imm_a3_reg[12]/D (DFF_X1)               0.0094    0.3191 r
+  data arrival time                                          0.3191
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.2036    0.2036
+  clock reconvergence pessimism                   -0.0054    0.1982
+  core/CPU_imm_a3_reg[12]/CK (DFF_X1)              0.0000    0.1982 r
+  clock uncertainty                                0.1000    0.2982
+  library hold time                                0.0341    0.3323
+  data required time                                         0.3323
+  --------------------------------------------------------------------------
+  data required time                                         0.3323
+  data arrival time                                         -0.3191
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0132
+
+
+
+  Startpoint: core/CPU_Xreg_value_a5_reg[17][0] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/OUT_reg[0] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1766    0.1766
+
+  core/CPU_Xreg_value_a5_reg[17][0]/CK (DFF_X1)    0.0000    0.1766 r
+  core/CPU_Xreg_value_a5_reg[17][0]/Q (DFF_X1)     0.1250    0.3016 r
+  core/OUT_reg[0]/D (DFF_X1)                       0.0037    0.3053 r
+  data arrival time                                          0.3053
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1929    0.1929
+  clock reconvergence pessimism                   -0.0054    0.1875
+  core/OUT_reg[0]/CK (DFF_X1)                      0.0000    0.1875 r
+  clock uncertainty                                0.1000    0.2875
+  library hold time                                0.0270    0.3145
+  data required time                                         0.3145
+  --------------------------------------------------------------------------
+  data required time                                         0.3145
+  data arrival time                                         -0.3053
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0092
+
+
+
+  Startpoint: core/CPU_imm_a2_reg[20] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_imm_a3_reg[20] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1731    0.1731
+
+  core/CPU_imm_a2_reg[20]/CK (DFF_X1)              0.0000    0.1731 r
+  core/CPU_imm_a2_reg[20]/Q (DFF_X1)               0.1107    0.2838 r
+  core/CPU_imm_a3_reg[20]/D (DFF_X1)               0.0017    0.2855 r
+  data arrival time                                          0.2855
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1779    0.1779
+  clock reconvergence pessimism                   -0.0054    0.1725
+  core/CPU_imm_a3_reg[20]/CK (DFF_X1)              0.0000    0.1725 r
+  clock uncertainty                                0.1000    0.2725
+  library hold time                                0.0221    0.2946
+  data required time                                         0.2946
+  --------------------------------------------------------------------------
+  data required time                                         0.2946
+  data arrival time                                         -0.2855
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0091
+
+
+
+  Startpoint: core/CPU_imm_a2_reg[15] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_imm_a3_reg[15] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1827    0.1827
+
+  core/CPU_imm_a2_reg[15]/CK (DFF_X1)              0.0000    0.1827 r
+  core/CPU_imm_a2_reg[15]/Q (DFF_X1)               0.1132    0.2958 r
+  core/CPU_imm_a3_reg[15]/D (DFF_X1)               0.0019    0.2978 r
+  data arrival time                                          0.2978
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1890    0.1890
+  clock reconvergence pessimism                   -0.0054    0.1836
+  core/CPU_imm_a3_reg[15]/CK (DFF_X1)              0.0000    0.1836 r
+  clock uncertainty                                0.1000    0.2836
+  library hold time                                0.0227    0.3063
+  data required time                                         0.3063
+  --------------------------------------------------------------------------
+  data required time                                         0.3063
+  data arrival time                                         -0.2978
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0086
+
+
+
+  Startpoint: core/CPU_imem_rd_addr_a1_reg[1] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_pc_a2_reg[3] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1727    0.1727
+
+  core/CPU_imem_rd_addr_a1_reg[1]/CK (DFF_X1)      0.0000    0.1727 r
+  core/CPU_imem_rd_addr_a1_reg[1]/Q (DFF_X1)       0.1320    0.3047 f
+  core/CPU_pc_a2_reg[3]/D (DFF_X1)                 0.0169    0.3215 f
+  data arrival time                                          0.3215
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1951    0.1951
+  clock reconvergence pessimism                   -0.0054    0.1897
+  core/CPU_pc_a2_reg[3]/CK (DFF_X1)                0.0000    0.1897 r
+  clock uncertainty                                0.1000    0.2897
+  library hold time                                0.0392    0.3289
+  data required time                                         0.3289
+  --------------------------------------------------------------------------
+  data required time                                         0.3289
+  data arrival time                                         -0.3215
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0074
+
+
+
+  Startpoint: core/CPU_imm_a2_reg[9] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_imm_a3_reg[9] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1842    0.1842
+
+  core/CPU_imm_a2_reg[9]/CK (DFF_X1)               0.0000    0.1842 r
+  core/CPU_imm_a2_reg[9]/Q (DFF_X1)                0.1125    0.2968 r
+  core/CPU_imm_a3_reg[9]/D (DFF_X1)                0.0015    0.2983 r
+  data arrival time                                          0.2983
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1868    0.1868
+  clock reconvergence pessimism                   -0.0054    0.1814
+  core/CPU_imm_a3_reg[9]/CK (DFF_X1)               0.0000    0.1814 r
+  clock uncertainty                                0.1000    0.2814
+  library hold time                                0.0222    0.3036
+  data required time                                         0.3036
+  --------------------------------------------------------------------------
+  data required time                                         0.3036
+  data arrival time                                         -0.2983
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0054
+
+
+
+  Startpoint: core/CPU_rd_a2_reg[3] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_rd_a3_reg[3] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1711    0.1711
+
+  core/CPU_rd_a2_reg[3]/CK (DFF_X1)                0.0000    0.1711 r
+  core/CPU_rd_a2_reg[3]/Q (DFF_X1)                 0.1371    0.3082 r
+  core/CPU_rd_a3_reg[3]/D (DFF_X1)                 0.0078    0.3160 r
+  data arrival time                                          0.3160
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1929    0.1929
+  clock reconvergence pessimism                   -0.0054    0.1875
+  core/CPU_rd_a3_reg[3]/CK (DFF_X1)                0.0000    0.1875 r
+  clock uncertainty                                0.1000    0.2875
+  library hold time                                0.0325    0.3200
+  data required time                                         0.3200
+  --------------------------------------------------------------------------
+  data required time                                         0.3200
+  data arrival time                                         -0.3160
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0039
+
+
+
+  Startpoint: core/CPU_imm_a2_reg[29] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_imm_a3_reg[29] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1800    0.1800
+
+  core/CPU_imm_a2_reg[29]/CK (DFF_X1)              0.0000    0.1800 r
+  core/CPU_imm_a2_reg[29]/Q (DFF_X1)               0.1199    0.2999 r
+  core/CPU_imm_a3_reg[29]/D (DFF_X1)               0.0023    0.3022 r
+  data arrival time                                          0.3022
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1860    0.1860
+  clock reconvergence pessimism                   -0.0054    0.1806
+  core/CPU_imm_a3_reg[29]/CK (DFF_X1)              0.0000    0.1806 r
+  clock uncertainty                                0.1000    0.2806
+  library hold time                                0.0247    0.3053
+  data required time                                         0.3053
+  --------------------------------------------------------------------------
+  data required time                                         0.3053
+  data arrival time                                         -0.3022
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0032
+
+
+
+  Startpoint: core/CPU_imm_a2_reg[26] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_imm_a3_reg[26] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1917    0.1917
+
+  core/CPU_imm_a2_reg[26]/CK (DFF_X1)              0.0000    0.1917 r
+  core/CPU_imm_a2_reg[26]/Q (DFF_X1)               0.1203    0.3121 r
+  core/CPU_imm_a3_reg[26]/D (DFF_X1)               0.0026    0.3147 r
+  data arrival time                                          0.3147
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1983    0.1983
+  clock reconvergence pessimism                   -0.0054    0.1929
+  core/CPU_imm_a3_reg[26]/CK (DFF_X1)              0.0000    0.1929 r
+  clock uncertainty                                0.1000    0.2929
+  library hold time                                0.0248    0.3178
+  data required time                                         0.3178
+  --------------------------------------------------------------------------
+  data required time                                         0.3178
+  data arrival time                                         -0.3147
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0031
+
+
+
+  Startpoint: core/CPU_imm_a2_reg[10] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_imm_a3_reg[10] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1771    0.1771
+
+  core/CPU_imm_a2_reg[10]/CK (DFF_X1)              0.0000    0.1771 r
+  core/CPU_imm_a2_reg[10]/Q (DFF_X1)               0.1208    0.2979 r
+  core/CPU_imm_a3_reg[10]/D (DFF_X1)               0.0031    0.3010 r
+  data arrival time                                          0.3010
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1825    0.1825
+  clock reconvergence pessimism                   -0.0054    0.1771
+  core/CPU_imm_a3_reg[10]/CK (DFF_X1)              0.0000    0.1771 r
+  clock uncertainty                                0.1000    0.2771
+  library hold time                                0.0257    0.3028
+  data required time                                         0.3028
+  --------------------------------------------------------------------------
+  data required time                                         0.3028
+  data arrival time                                         -0.3010
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0018
+
+
+
+  Startpoint: core/CPU_rd_a2_reg[1] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_rd_a3_reg[1] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1755    0.1755
+
+  core/CPU_rd_a2_reg[1]/CK (DFF_X1)                0.0000    0.1755 r
+  core/CPU_rd_a2_reg[1]/Q (DFF_X1)                 0.1195    0.2950 r
+  core/CPU_rd_a3_reg[1]/D (DFF_X1)                 0.0042    0.2992 r
+  data arrival time                                          0.2992
+
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1800    0.1800
+  clock reconvergence pessimism                   -0.0054    0.1746
+  core/CPU_rd_a3_reg[1]/CK (DFF_X1)                0.0000    0.1746 r
+  clock uncertainty                                0.1000    0.2746
+  library hold time                                0.0249    0.2995
+  data required time                                         0.2995
+  --------------------------------------------------------------------------
+  data required time                                         0.2995
+  data arrival time                                         -0.2992
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0003
+
+
+
+   Mode: func1 Corner: func1
+   Scenario: func1
+    Net: CLK
+    max_transition       0.1985
+  - Transition Time      0.4000
+  --------------------------------
+    Slack               -0.2015 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/cto_buf_drc_1102/A   0.1985   0.4000       -0.2015  (VIOLATED) 
+
+    Net: reset
+    max_transition       0.1985
+  - Transition Time      0.3989
+  --------------------------------
+    Slack               -0.2003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_reset_a1_reg/D   0.1985   0.3989       -0.2003  (VIOLATED) 
+
+    Net: core/HFSNET_81
+    max_transition       0.1985
+  - Transition Time      0.2535
+  --------------------------------
+    Slack               -0.0550 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1112/A1      0.1985         0.2535        -0.0550  (VIOLATED) 
+     PIN : core/U1519/B2      0.1985         0.2533        -0.0548  (VIOLATED) 
+     PIN : core/U1168/A1      0.1985         0.2533        -0.0548  (VIOLATED) 
+     PIN : core/U1184/A1      0.1985         0.2533        -0.0548  (VIOLATED) 
+     PIN : core/U1160/A1      0.1985         0.2530        -0.0545  (VIOLATED) 
+     PIN : core/U1164/A1      0.1985         0.2526        -0.0541  (VIOLATED) 
+     PIN : core/U1116/A1      0.1985         0.2524        -0.0539  (VIOLATED) 
+     PIN : core/U1132/A1      0.1985         0.2524        -0.0539  (VIOLATED) 
+     PIN : core/U1096/A1      0.1985         0.2524        -0.0539  (VIOLATED) 
+     PIN : core/U1100/A1      0.1985         0.2524        -0.0539  (VIOLATED) 
+     PIN : core/U1156/A1      0.1985         0.2523        -0.0538  (VIOLATED) 
+     PIN : core/U1092/A1      0.1985         0.2522        -0.0537  (VIOLATED) 
+     PIN : core/U1172/A1      0.1985         0.2515        -0.0529  (VIOLATED) 
+     PIN : core/U1140/A1      0.1985         0.2514        -0.0529  (VIOLATED) 
+     PIN : core/U1180/A1      0.1985         0.2514        -0.0529  (VIOLATED) 
+     PIN : core/U1104/A1      0.1985         0.2514        -0.0529  (VIOLATED) 
+     PIN : core/U1120/A1      0.1985         0.2502        -0.0516  (VIOLATED) 
+     PIN : core/U1108/A1      0.1985         0.2472        -0.0486  (VIOLATED) 
+     PIN : core/U1124/A1      0.1985         0.2472        -0.0486  (VIOLATED) 
+     PIN : core/U1152/A1      0.1985         0.2439        -0.0454  (VIOLATED) 
+     PIN : core/U1136/A1      0.1985         0.2417        -0.0432  (VIOLATED) 
+     PIN : core/U1176/A1      0.1985         0.2238        -0.0253  (VIOLATED) 
+     PIN : core/U1128/A1      0.1985         0.2060        -0.0075  (VIOLATED) 
+
+    Net: core/HFSNET_124
+    max_transition       0.1985
+  - Transition Time      0.2519
+  --------------------------------
+    Slack               -0.0533 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U378/A2       0.1985         0.2519        -0.0533  (VIOLATED) 
+     PIN : core/U609/A1       0.1985         0.2519        -0.0533  (VIOLATED) 
+     PIN : core/U458/A1       0.1985         0.2516        -0.0530  (VIOLATED) 
+     PIN : core/U398/A1       0.1985         0.2516        -0.0530  (VIOLATED) 
+     PIN : core/U428/A1       0.1985         0.2514        -0.0529  (VIOLATED) 
+     PIN : core/U594/A1       0.1985         0.2511        -0.0526  (VIOLATED) 
+     PIN : core/U1503/B1      0.1985         0.2509        -0.0523  (VIOLATED) 
+     PIN : core/U1507/B2      0.1985         0.2502        -0.0516  (VIOLATED) 
+     PIN : core/U564/A1       0.1985         0.2463        -0.0478  (VIOLATED) 
+     PIN : core/U413/A1       0.1985         0.2413        -0.0428  (VIOLATED) 
+     PIN : core/U534/A1       0.1985         0.2355        -0.0370  (VIOLATED) 
+     PIN : core/U1505/B2      0.1985         0.2342        -0.0357  (VIOLATED) 
+     PIN : core/U489/A1       0.1985         0.2340        -0.0355  (VIOLATED) 
+     PIN : core/U654/A1       0.1985         0.2340        -0.0355  (VIOLATED) 
+     PIN : core/U639/A1       0.1985         0.2298        -0.0312  (VIOLATED) 
+     PIN : core/U729/A1       0.1985         0.2292        -0.0307  (VIOLATED) 
+     PIN : core/U504/A1       0.1985         0.2290        -0.0305  (VIOLATED) 
+     PIN : core/U624/A1       0.1985         0.2290        -0.0305  (VIOLATED) 
+     PIN : core/U714/A1       0.1985         0.2290        -0.0305  (VIOLATED) 
+     PIN : core/U1039/A1      0.1985         0.2288        -0.0302  (VIOLATED) 
+     PIN : core/U519/A1       0.1985         0.2288        -0.0302  (VIOLATED) 
+     PIN : core/U669/A1       0.1985         0.2287        -0.0301  (VIOLATED) 
+     PIN : core/U684/A1       0.1985         0.2287        -0.0301  (VIOLATED) 
+     PIN : core/U549/A1       0.1985         0.2286        -0.0301  (VIOLATED) 
+     PIN : core/U743/A1       0.1985         0.2282        -0.0297  (VIOLATED) 
+     PIN : core/U473/A1       0.1985         0.2281        -0.0295  (VIOLATED) 
+     PIN : core/U380/A1       0.1985         0.2280        -0.0294  (VIOLATED) 
+     PIN : core/U443/A1       0.1985         0.2279        -0.0294  (VIOLATED) 
+     PIN : core/U579/A1       0.1985         0.2275        -0.0290  (VIOLATED) 
+     PIN : core/U699/A1       0.1985         0.2275        -0.0290  (VIOLATED) 
+     PIN : core/U1500/B2      0.1985         0.2219        -0.0233  (VIOLATED) 
+     PIN : core/U1501/B2      0.1985         0.1993        -0.0008  (VIOLATED) 
+
+    Net: core/HFSNET_125
+    max_transition       0.1985
+  - Transition Time      0.2358
+  --------------------------------
+    Slack               -0.0373 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1333/A1      0.1985         0.2358        -0.0373  (VIOLATED) 
+     PIN : core/U1325/A1      0.1985         0.2353        -0.0368  (VIOLATED) 
+     PIN : core/U1365/A1      0.1985         0.2353        -0.0368  (VIOLATED) 
+     PIN : core/U1341/A1      0.1985         0.2353        -0.0368  (VIOLATED) 
+     PIN : core/U1277/A1      0.1985         0.2349        -0.0364  (VIOLATED) 
+     PIN : core/U1453/A1      0.1985         0.2347        -0.0362  (VIOLATED) 
+     PIN : core/U1429/A1      0.1985         0.2340        -0.0355  (VIOLATED) 
+     PIN : core/U1301/A1      0.1985         0.2338        -0.0352  (VIOLATED) 
+     PIN : core/U1389/A1      0.1985         0.2338        -0.0352  (VIOLATED) 
+     PIN : core/U1461/A1      0.1985         0.2337        -0.0352  (VIOLATED) 
+     PIN : core/U1269/A1      0.1985         0.2302        -0.0317  (VIOLATED) 
+     PIN : core/U1285/A1      0.1985         0.2284        -0.0299  (VIOLATED) 
+     PIN : core/U1293/A1      0.1985         0.2284        -0.0299  (VIOLATED) 
+     PIN : core/U1357/A1      0.1985         0.2284        -0.0299  (VIOLATED) 
+     PIN : core/U1373/A1      0.1985         0.2263        -0.0278  (VIOLATED) 
+     PIN : core/U1559/B2      0.1985         0.2263        -0.0278  (VIOLATED) 
+     PIN : core/U1421/A1      0.1985         0.2251        -0.0266  (VIOLATED) 
+     PIN : core/U1381/A1      0.1985         0.2251        -0.0266  (VIOLATED) 
+     PIN : core/U1561/B2      0.1985         0.2162        -0.0176  (VIOLATED) 
+     PIN : core/U1558/B2      0.1985         0.2162        -0.0176  (VIOLATED) 
+     PIN : core/U1437/A1      0.1985         0.2156        -0.0171  (VIOLATED) 
+     PIN : core/U1250/A1      0.1985         0.2156        -0.0171  (VIOLATED) 
+     PIN : core/U1413/A1      0.1985         0.2153        -0.0168  (VIOLATED) 
+     PIN : core/U1249/A1      0.1985         0.2153        -0.0168  (VIOLATED) 
+     PIN : core/U1445/A1      0.1985         0.2153        -0.0167  (VIOLATED) 
+     PIN : core/U1560/B2      0.1985         0.2153        -0.0167  (VIOLATED) 
+
+    Net: core/ZBUF_8621_0
+    max_transition       0.1985
+  - Transition Time      0.2339
+  --------------------------------
+    Slack               -0.0353 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U840/B2       0.1985         0.2339        -0.0353  (VIOLATED) 
+     PIN : core/U1002/B2      0.1985         0.2339        -0.0353  (VIOLATED) 
+     PIN : core/U848/B2       0.1985         0.2339        -0.0353  (VIOLATED) 
+     PIN : core/U978/B2       0.1985         0.2339        -0.0353  (VIOLATED) 
+     PIN : core/U986/B2       0.1985         0.2337        -0.0351  (VIOLATED) 
+     PIN : core/U946/B2       0.1985         0.2337        -0.0351  (VIOLATED) 
+     PIN : core/U816/B2       0.1985         0.2335        -0.0350  (VIOLATED) 
+     PIN : core/U857/B2       0.1985         0.2332        -0.0347  (VIOLATED) 
+     PIN : core/U873/B2       0.1985         0.2329        -0.0344  (VIOLATED) 
+     PIN : core/U865/B2       0.1985         0.2329        -0.0344  (VIOLATED) 
+     PIN : core/U914/B2       0.1985         0.2329        -0.0344  (VIOLATED) 
+     PIN : core/U954/B2       0.1985         0.2329        -0.0344  (VIOLATED) 
+     PIN : core/U832/B2       0.1985         0.2328        -0.0343  (VIOLATED) 
+     PIN : core/U1033/B2      0.1985         0.2326        -0.0341  (VIOLATED) 
+     PIN : core/U938/B2       0.1985         0.2326        -0.0341  (VIOLATED) 
+     PIN : core/U994/B2       0.1985         0.2325        -0.0340  (VIOLATED) 
+     PIN : core/U906/B2       0.1985         0.2324        -0.0339  (VIOLATED) 
+     PIN : core/U922/B2       0.1985         0.2321        -0.0335  (VIOLATED) 
+     PIN : core/U1025/B2      0.1985         0.2321        -0.0335  (VIOLATED) 
+     PIN : core/U824/B2       0.1985         0.2254        -0.0268  (VIOLATED) 
+     PIN : core/U898/B2       0.1985         0.1990        -0.0004  (VIOLATED) 
+     PIN : core/U881/B2       0.1985         0.1990        -0.0004  (VIOLATED) 
+
+    Net: core/n903
+    max_transition       0.1985
+  - Transition Time      0.2226
+  --------------------------------
+    Slack               -0.0241 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1350/A2      0.1985         0.2226        -0.0241  (VIOLATED) 
+     PIN : core/U1131/A2      0.1985         0.2225        -0.0240  (VIOLATED) 
+     PIN : core/U1352/A2      0.1985         0.2225        -0.0240  (VIOLATED) 
+     PIN : core/U1348/A2      0.1985         0.2223        -0.0237  (VIOLATED) 
+     PIN : core/U1351/A2      0.1985         0.2219        -0.0233  (VIOLATED) 
+     PIN : core/U1353/A2      0.1985         0.2217        -0.0232  (VIOLATED) 
+     PIN : core/U1349/A2      0.1985         0.2208        -0.0223  (VIOLATED) 
+     PIN : core/U1128/A2      0.1985         0.2096        -0.0111  (VIOLATED) 
+
+    Net: core/ZBUF_1122_23
+    max_transition       0.1985
+  - Transition Time      0.2104
+  --------------------------------
+    Slack               -0.0118 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U960/A2       0.1985         0.2104        -0.0118  (VIOLATED) 
+     PIN : core/U1302/A2      0.1985         0.2103        -0.0118  (VIOLATED) 
+     PIN : core/U1306/A2      0.1985         0.2101        -0.0116  (VIOLATED) 
+     PIN : core/U1301/A2      0.1985         0.2101        -0.0116  (VIOLATED) 
+     PIN : core/U1305/A2      0.1985         0.2098        -0.0113  (VIOLATED) 
+     PIN : core/U1105/A2      0.1985         0.2096        -0.0111  (VIOLATED) 
+     PIN : core/U1107/A2      0.1985         0.2096        -0.0111  (VIOLATED) 
+     PIN : core/U1303/A2      0.1985         0.2096        -0.0111  (VIOLATED) 
+     PIN : core/U1300/A2      0.1985         0.2093        -0.0107  (VIOLATED) 
+     PIN : core/U1304/A2      0.1985         0.2090        -0.0105  (VIOLATED) 
+     PIN : core/U1106/A2      0.1985         0.2052        -0.0067  (VIOLATED) 
+     PIN : core/U961/A2       0.1985         0.2047        -0.0062  (VIOLATED) 
+
+    Net: core/gre_net_309
+    max_transition       0.1985
+  - Transition Time      0.2068
+  --------------------------------
+    Slack               -0.0082 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1315/B1      0.1985         0.2068        -0.0082  (VIOLATED) 
+     PIN : core/U1283/B1      0.1985         0.2066        -0.0081  (VIOLATED) 
+     PIN : core/U1355/B1      0.1985         0.2066        -0.0081  (VIOLATED) 
+     PIN : core/U1267/B1      0.1985         0.2062        -0.0077  (VIOLATED) 
+     PIN : core/U1275/B1      0.1985         0.2062        -0.0077  (VIOLATED) 
+     PIN : core/U1395/B1      0.1985         0.2062        -0.0077  (VIOLATED) 
+     PIN : core/U1435/B1      0.1985         0.2059        -0.0074  (VIOLATED) 
+     PIN : core/U1451/B1      0.1985         0.2059        -0.0074  (VIOLATED) 
+     PIN : core/U1556/A2      0.1985         0.2059        -0.0073  (VIOLATED) 
+     PIN : core/U1467/B1      0.1985         0.2059        -0.0073  (VIOLATED) 
+     PIN : core/U1291/B1      0.1985         0.2055        -0.0070  (VIOLATED) 
+     PIN : core/U1307/B1      0.1985         0.2054        -0.0069  (VIOLATED) 
+     PIN : core/U1411/B1      0.1985         0.2054        -0.0069  (VIOLATED) 
+     PIN : core/U1363/B1      0.1985         0.2053        -0.0068  (VIOLATED) 
+     PIN : core/U1299/B1      0.1985         0.2051        -0.0066  (VIOLATED) 
+     PIN : core/U1443/B1      0.1985         0.2037        -0.0052  (VIOLATED) 
+     PIN : core/U1339/B1      0.1985         0.2034        -0.0049  (VIOLATED) 
+     PIN : core/U1427/B1      0.1985         0.2034        -0.0049  (VIOLATED) 
+     PIN : core/U1347/B1      0.1985         0.2016        -0.0030  (VIOLATED) 
+
+    Net: core/CPU_src2_value_a2[30]
+    max_transition       0.1985
+  - Transition Time      0.2021
+  --------------------------------
+    Slack               -0.0035 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_src2_value_a3_reg[30]/D   0.1985   0.2021  -0.0035 (VIOLATED)
+
+    Net: core/HFSNET_107
+    max_transition       0.1985
+  - Transition Time      0.2020
+  --------------------------------
+    Slack               -0.0035 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1336/A1      0.1985         0.2020        -0.0035  (VIOLATED) 
+     PIN : core/U1344/A1      0.1985         0.2018        -0.0033  (VIOLATED) 
+     PIN : core/U1464/A1      0.1985         0.2017        -0.0032  (VIOLATED) 
+     PIN : core/U1320/A1      0.1985         0.2016        -0.0031  (VIOLATED) 
+     PIN : core/U1368/A1      0.1985         0.2016        -0.0030  (VIOLATED) 
+     PIN : core/U1416/A1      0.1985         0.2014        -0.0028  (VIOLATED) 
+     PIN : core/U1392/A1      0.1985         0.2013        -0.0028  (VIOLATED) 
+     PIN : core/U1456/A1      0.1985         0.2011        -0.0026  (VIOLATED) 
+     PIN : core/U1328/A1      0.1985         0.2010        -0.0025  (VIOLATED) 
+     PIN : core/U1288/A1      0.1985         0.2010        -0.0025  (VIOLATED) 
+     PIN : core/U1400/A1      0.1985         0.2007        -0.0022  (VIOLATED) 
+     PIN : core/U1296/A1      0.1985         0.2007        -0.0022  (VIOLATED) 
+     PIN : core/U1258/A1      0.1985         0.2007        -0.0022  (VIOLATED) 
+     PIN : core/U1432/A1      0.1985         0.2006        -0.0021  (VIOLATED) 
+     PIN : core/U1408/A1      0.1985         0.2005        -0.0020  (VIOLATED) 
+     PIN : core/U1304/A1      0.1985         0.2005        -0.0020  (VIOLATED) 
+     PIN : core/U1352/A1      0.1985         0.2004        -0.0019  (VIOLATED) 
+     PIN : core/U1360/A1      0.1985         0.2003        -0.0018  (VIOLATED) 
+     PIN : core/U1448/A1      0.1985         0.2003        -0.0017  (VIOLATED) 
+     PIN : core/U1280/A1      0.1985         0.2003        -0.0017  (VIOLATED) 
+     PIN : core/U1424/A1      0.1985         0.2001        -0.0016  (VIOLATED) 
+     PIN : core/U1440/A1      0.1985         0.2000        -0.0015  (VIOLATED) 
+
+    Net: core/ZBUF_1993_29
+    max_transition       0.1985
+  - Transition Time      0.1997
+  --------------------------------
+    Slack               -0.0011 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1344/B1      0.1985         0.1997        -0.0011  (VIOLATED) 
+     PIN : core/U1288/B1      0.1985         0.1996        -0.0011  (VIOLATED) 
+     PIN : core/U1258/B1      0.1985         0.1995        -0.0009  (VIOLATED) 
+     PIN : core/U1296/B1      0.1985         0.1995        -0.0009  (VIOLATED) 
+     PIN : core/U1368/B1      0.1985         0.1993        -0.0008  (VIOLATED) 
+     PIN : core/U1336/B1      0.1985         0.1993        -0.0007  (VIOLATED) 
+     PIN : core/U1352/B1      0.1985         0.1992        -0.0007  (VIOLATED) 
+     PIN : core/U1320/B1      0.1985         0.1991        -0.0006  (VIOLATED) 
+     PIN : core/U1328/B1      0.1985         0.1991        -0.0006  (VIOLATED) 
+     PIN : core/U1456/B1      0.1985         0.1991        -0.0005  (VIOLATED) 
+     PIN : core/U1304/B1      0.1985         0.1990        -0.0004  (VIOLATED) 
+     PIN : core/U1464/B1      0.1985         0.1990        -0.0004  (VIOLATED) 
+     PIN : core/U1416/B1      0.1985         0.1989        -0.0004  (VIOLATED) 
+     PIN : core/U1392/B1      0.1985         0.1989        -0.0003  (VIOLATED) 
+     PIN : core/U1400/B1      0.1985         0.1989        -0.0003  (VIOLATED) 
+     PIN : core/U1360/B1      0.1985         0.1987        -0.0002  (VIOLATED) 
+
+  ---------------------------------------------------------------------------
+   Number of max_transition violation(s): 12
+
+   Mode: func1 Corner: func1
+   Scenario: func1
+    Net: core/n3241
+    max_capacitance     52.1088
+  - Capacitance         65.2441
+  --------------------------------
+    Slack              -13.1353 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1231/ZN     52.1088        65.2441       -13.1353  (VIOLATED) 
+
+    Net: core/n3294
+    max_capacitance     23.2315
+  - Capacitance         33.6244
+  --------------------------------
+    Slack              -10.3929 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1393/ZN     23.2315        33.6244       -10.3929  (VIOLATED) 
+
+    Net: core/n1397
+    max_capacitance     60.2722
+  - Capacitance         70.3418
+  --------------------------------
+    Slack              -10.0696 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[16][21]/QN  60.2722  70.3418 -10.0696 (VIOLATED)
+
+    Net: core/n903
+    max_capacitance    118.7130
+  - Capacitance        127.5874
+  --------------------------------
+    Slack               -8.8744 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U578/ZN     118.7130       127.5874        -8.8744  (VIOLATED) 
+
+    Net: core/gre_net_115
+    max_capacitance     60.7300
+  - Capacitance         69.1765
+  --------------------------------
+    Slack               -8.4465 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/gre_mt_inst_1383/Z  60.7300  69.1765       -8.4465  (VIOLATED) 
+
+    Net: core/CPU_Xreg_value_a4_CDR1[11][29]
+    max_capacitance     60.7300
+  - Capacitance         68.5460
+  --------------------------------
+    Slack               -7.8160 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[11][29]/Q  60.7300  68.5460  -7.8160 (VIOLATED)
+
+    Net: core/n351_CDR1
+    max_capacitance     26.0544
+  - Capacitance         33.4923
+  --------------------------------
+    Slack               -7.4379 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U431/ZN      26.0544        33.4923        -7.4379  (VIOLATED) 
+
+    Net: core/CPU_Xreg_value_a4_CDR1[2][19]
+    max_capacitance     60.7300
+  - Capacitance         67.8119
+  --------------------------------
+    Slack               -7.0819 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[2][19]/Q  60.7300  67.8119  -7.0819 (VIOLATED)
+
+    Net: core/n3338
+    max_capacitance     26.0544
+  - Capacitance         32.5944
+  --------------------------------
+    Slack               -6.5400 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1198/ZN     26.0544        32.5944        -6.5400  (VIOLATED) 
+
+    Net: core/CPU_Xreg_value_a4_CDR1[8][25]
+    max_capacitance     60.7300
+  - Capacitance         66.9967
+  --------------------------------
+    Slack               -6.2667 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[8][25]/Q  60.7300  66.9967  -6.2667 (VIOLATED)
+
+    Net: core/n3152
+    max_capacitance     23.2315
+  - Capacitance         29.2474
+  --------------------------------
+    Slack               -6.0159 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1268/ZN     23.2315        29.2474        -6.0159  (VIOLATED) 
+
+    Net: core/n1262
+    max_capacitance     60.2722
+  - Capacitance         66.1909
+  --------------------------------
+    Slack               -5.9187 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[18][9]/QN  60.2722  66.1909  -5.9187 (VIOLATED)
+
+    Net: core/CPU_Xreg_value_a4_CDR1[11][20]
+    max_capacitance     60.7300
+  - Capacitance         66.3056
+  --------------------------------
+    Slack               -5.5756 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[11][20]/Q  60.7300  66.3056  -5.5756 (VIOLATED)
+
+    Net: core/gre_net_398
+    max_capacitance    121.4600
+  - Capacitance        126.9443
+  --------------------------------
+    Slack               -5.4843 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/gre_mt_inst_1666/Z 121.4600 126.9443       -5.4843  (VIOLATED) 
+
+    Net: core/n1391
+    max_capacitance     60.2722
+  - Capacitance         65.6032
+  --------------------------------
+    Slack               -5.3310 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[16][18]/QN  60.2722  65.6032  -5.3310 (VIOLATED)
+
+    Net: core/CPU_Xreg_value_a4_CDR1[8][28]
+    max_capacitance     60.7300
+  - Capacitance         65.9978
+  --------------------------------
+    Slack               -5.2678 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[8][28]/Q  60.7300  65.9978  -5.2678 (VIOLATED)
+
+    Net: core/gre_net_164
+    max_capacitance     60.7300
+  - Capacitance         65.8410
+  --------------------------------
+    Slack               -5.1110 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/gre_mt_inst_1432/Z  60.7300  65.8410       -5.1110  (VIOLATED) 
+
+    Net: core/gre_net_198
+    max_capacitance     60.7300
+  - Capacitance         65.7839
+  --------------------------------
+    Slack               -5.0539 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/gre_mt_inst_1466/Z  60.7300  65.7839       -5.0539  (VIOLATED) 
+
+    Net: core/n894
+    max_capacitance    118.7130
+  - Capacitance        123.6026
+  --------------------------------
+    Slack               -4.8896 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U638/ZN     118.7130       123.6026        -4.8896  (VIOLATED) 
+
+    Net: core/n1155
+    max_capacitance     60.2722
+  - Capacitance         65.1107
+  --------------------------------
+    Slack               -4.8385 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[11][6]/QN  60.2722  65.1107  -4.8385 (VIOLATED)
+
+    Net: core/gre_net_518
+    max_capacitance     60.7300
+  - Capacitance         65.5357
+  --------------------------------
+    Slack               -4.8057 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/gre_mt_inst_1801/Z  60.7300  65.5357       -4.8057  (VIOLATED) 
+
+    Net: core/n1393
+    max_capacitance     60.2722
+  - Capacitance         64.2879
+  --------------------------------
+    Slack               -4.0157 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[16][19]/QN  60.2722  64.2879  -4.0157 (VIOLATED)
+
+    Net: core/n1468
+    max_capacitance     60.2722
+  - Capacitance         64.2800
+  --------------------------------
+    Slack               -4.0078 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[1][4]/QN  60.2722  64.2800  -4.0078 (VIOLATED)
+
+    Net: core/gre_net_176
+    max_capacitance     60.7300
+  - Capacitance         64.6338
+  --------------------------------
+    Slack               -3.9038 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/gre_mt_inst_1444/Z  60.7300  64.6338       -3.9038  (VIOLATED) 
+
+    Net: core/CPU_instr_a1_21
+    max_capacitance     25.5585
+  - Capacitance         29.3987
+  --------------------------------
+    Slack               -3.8402 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1493/ZN     25.5585        29.3987        -3.8402  (VIOLATED) 
+
+    Net: core/n573_CDR1
+    max_capacitance     24.6048
+  - Capacitance         28.3669
+  --------------------------------
+    Slack               -3.7621 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U736/ZN      24.6048        28.3669        -3.7621  (VIOLATED) 
+
+    Net: core/n1493
+    max_capacitance     60.2722
+  - Capacitance         64.0241
+  --------------------------------
+    Slack               -3.7519 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[19][2]/QN  60.2722  64.0241  -3.7519 (VIOLATED)
+
+    Net: core/ZBUF_210_f_35
+    max_capacitance     60.7300
+  - Capacitance         64.3828
+  --------------------------------
+    Slack               -3.6528 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/ZBUF_210_f_inst_565/Z  60.7300  64.3828    -3.6528  (VIOLATED) 
+
+    Net: core/CPU_Xreg_value_a4_CDR1[18][21]
+    max_capacitance     60.7300
+  - Capacitance         64.2817
+  --------------------------------
+    Slack               -3.5517 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[18][21]/Q  60.7300  64.2817  -3.5517 (VIOLATED)
+
+    Net: core/ZBUF_362_6
+    max_capacitance     60.7300
+  - Capacitance         64.2709
+  --------------------------------
+    Slack               -3.5409 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/ZBUF_362_inst_462/Z  60.7300  64.2709      -3.5409  (VIOLATED) 
+
+    Net: core/n1034_CDR1
+    max_capacitance     60.2722
+  - Capacitance         63.5982
+  --------------------------------
+    Slack               -3.3260 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_src1_value_a3_reg[9]/QN  60.2722  63.5982  -3.3260 (VIOLATED)
+
+    Net: core/n3156
+    max_capacitance     23.2315
+  - Capacitance         26.3741
+  --------------------------------
+    Slack               -3.1426 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1300/ZN     23.2315        26.3741        -3.1426  (VIOLATED) 
+
+    Net: core/n1438
+    max_capacitance     60.2722
+  - Capacitance         63.3669
+  --------------------------------
+    Slack               -3.0947 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[26][31]/QN  60.2722  63.3669  -3.0947 (VIOLATED)
+
+    Net: core/n3166
+    max_capacitance     23.2315
+  - Capacitance         26.0843
+  --------------------------------
+    Slack               -2.8528 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1380/ZN     23.2315        26.0843        -2.8528  (VIOLATED) 
+
+    Net: core/CPU_Xreg_value_a4_CDR1[9][29]
+    max_capacitance     60.7300
+  - Capacitance         63.5235
+  --------------------------------
+    Slack               -2.7935 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[9][29]/Q  60.7300  63.5235  -2.7935 (VIOLATED)
+
+    Net: core/ZBUF_672_2
+    max_capacitance     60.7300
+  - Capacitance         63.4712
+  --------------------------------
+    Slack               -2.7412 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/ZBUF_672_inst_435/Z  60.7300  63.4712      -2.7412  (VIOLATED) 
+
+    Net: core/n227
+    max_capacitance     24.6048
+  - Capacitance         27.3160
+  --------------------------------
+    Slack               -2.7112 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U268/ZN      24.6048        27.3160        -2.7112  (VIOLATED) 
+
+    Net: core/gre_net_290
+    max_capacitance     60.7300
+  - Capacitance         63.3791
+  --------------------------------
+    Slack               -2.6491 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/gre_mt_inst_1558/Z  60.7300  63.3791       -2.6491  (VIOLATED) 
+
+    Net: core/gre_net_243
+    max_capacitance     60.7300
+  - Capacitance         63.2844
+  --------------------------------
+    Slack               -2.5544 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/gre_mt_inst_1511/Z  60.7300  63.2844       -2.5544  (VIOLATED) 
+
+    Net: core/n1331
+    max_capacitance     60.2722
+  - Capacitance         62.8236
+  --------------------------------
+    Slack               -2.5514 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[25][22]/QN  60.2722  62.8236  -2.5514 (VIOLATED)
+
+    Net: core/HFSNET_111
+    max_capacitance     60.7300
+  - Capacitance         63.2203
+  --------------------------------
+    Slack               -2.4903 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/HFSBUF_45_121/Z  60.7300    63.2203        -2.4903  (VIOLATED) 
+
+    Net: core/ZBUF_2_10
+    max_capacitance     60.7300
+  - Capacitance         63.1961
+  --------------------------------
+    Slack               -2.4661 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/ZBUF_2_inst_490/Z  60.7300  63.1961        -2.4661  (VIOLATED) 
+
+    Net: core/n3368
+    max_capacitance     26.0544
+  - Capacitance         28.4322
+  --------------------------------
+    Slack               -2.3778 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1075/ZN     26.0544        28.4322        -2.3778  (VIOLATED) 
+
+    Net: core/ZBUF_2162_68
+    max_capacitance    181.8850
+  - Capacitance        184.2320
+  --------------------------------
+    Slack               -2.3470 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/ZBUF_2162_inst_921/Z 181.8850 184.2320     -2.3470  (VIOLATED) 
+
+    Net: core/CPU_Xreg_value_a4_CDR1[2][27]
+    max_capacitance     60.7300
+  - Capacitance         62.9804
+  --------------------------------
+    Slack               -2.2504 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[2][27]/Q  60.7300  62.9804  -2.2504 (VIOLATED)
+
+    Net: core/gre_net_530
+    max_capacitance     60.7300
+  - Capacitance         62.9385
+  --------------------------------
+    Slack               -2.2085 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/gre_mt_inst_1813/Z  60.7300  62.9385       -2.2085  (VIOLATED) 
+
+    Net: core/n3189
+    max_capacitance     23.2315
+  - Capacitance         25.3493
+  --------------------------------
+    Slack               -2.1178 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1319/ZN     23.2315        25.3493        -2.1178  (VIOLATED) 
+
+    Net: core/n3217
+    max_capacitance     23.2315
+  - Capacitance         25.3222
+  --------------------------------
+    Slack               -2.0907 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1278/ZN     23.2315        25.3222        -2.0907  (VIOLATED) 
+
+    Net: core/n1234
+    max_capacitance     60.2722
+  - Capacitance         62.1389
+  --------------------------------
+    Slack               -1.8667 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[10][9]/QN  60.2722  62.1389  -1.8667 (VIOLATED)
+
+    Net: core/CPU_Xreg_value_a4_CDR1[19][2]
+    max_capacitance     60.7300
+  - Capacitance         62.5874
+  --------------------------------
+    Slack               -1.8574 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[19][2]/Q  60.7300  62.5874  -1.8574 (VIOLATED)
+
+    Net: core/CPU_Xreg_value_a4[18][13]
+    max_capacitance     60.7300
+  - Capacitance         62.4984
+  --------------------------------
+    Slack               -1.7684 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[18][13]/Q  60.7300  62.4984  -1.7684 (VIOLATED)
+
+    Net: core/gre_net_194
+    max_capacitance     60.7300
+  - Capacitance         62.4614
+  --------------------------------
+    Slack               -1.7314 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/gre_mt_inst_1462/Z  60.7300  62.4614       -1.7314  (VIOLATED) 
+
+    Net: core/n3507
+    max_capacitance     23.2315
+  - Capacitance         24.9072
+  --------------------------------
+    Slack               -1.6757 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1097/ZN     23.2315        24.9072        -1.6757  (VIOLATED) 
+
+    Net: core/n1071
+    max_capacitance     60.2722
+  - Capacitance         61.9299
+  --------------------------------
+    Slack               -1.6577 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[3][20]/QN  60.2722  61.9299  -1.6577 (VIOLATED)
+
+    Net: core/n3415
+    max_capacitance     23.2315
+  - Capacitance         24.8309
+  --------------------------------
+    Slack               -1.5994 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1119/ZN     23.2315        24.8309        -1.5994  (VIOLATED) 
+
+    Net: core/CPU_Xreg_value_a4[3][29]
+    max_capacitance     60.7300
+  - Capacitance         62.2622
+  --------------------------------
+    Slack               -1.5322 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[3][29]/Q  60.7300  62.2622  -1.5322 (VIOLATED)
+
+    Net: core/CPU_rs1_a2[0]
+    max_capacitance     60.7300
+  - Capacitance         62.2576
+  --------------------------------
+    Slack               -1.5276 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_rs1_a2_reg[0]/Q  60.7300  62.2576      -1.5276  (VIOLATED) 
+
+    Net: core/n3164
+    max_capacitance     23.2315
+  - Capacitance         24.7453
+  --------------------------------
+    Slack               -1.5138 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1364/ZN     23.2315        24.7453        -1.5138  (VIOLATED) 
+
+    Net: core/n3128
+    max_capacitance     23.2315
+  - Capacitance         24.6591
+  --------------------------------
+    Slack               -1.4276 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1339/ZN     23.2315        24.6591        -1.4276  (VIOLATED) 
+
+    Net: core/n1229
+    max_capacitance     60.2722
+  - Capacitance         61.5930
+  --------------------------------
+    Slack               -1.3208 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[10][14]/QN  60.2722  61.5930  -1.3208 (VIOLATED)
+
+    Net: core/CPU_Xreg_value_a4_CDR1[9][19]
+    max_capacitance     60.7300
+  - Capacitance         62.0264
+  --------------------------------
+    Slack               -1.2964 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[9][19]/Q  60.7300  62.0264  -1.2964 (VIOLATED)
+
+    Net: core/n3258
+    max_capacitance     23.2315
+  - Capacitance         24.5162
+  --------------------------------
+    Slack               -1.2847 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1362/ZN     23.2315        24.5162        -1.2847  (VIOLATED) 
+
+    Net: core/gre_net_52
+    max_capacitance     60.7300
+  - Capacitance         61.9926
+  --------------------------------
+    Slack               -1.2626 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/gre_mt_inst_1320/Z  60.7300  61.9926       -1.2626  (VIOLATED) 
+
+    Net: core/n1390
+    max_capacitance     60.2722
+  - Capacitance         61.5247
+  --------------------------------
+    Slack               -1.2525 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[26][17]/QN  60.2722  61.5247  -1.2525 (VIOLATED)
+
+    Net: core/n476_CDR1
+    max_capacitance     28.9917
+  - Capacitance         30.1627
+  --------------------------------
+    Slack               -1.1710 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U603/ZN      28.9917        30.1627        -1.1710  (VIOLATED) 
+
+    Net: core/gre_net_317
+    max_capacitance     60.7300
+  - Capacitance         61.8586
+  --------------------------------
+    Slack               -1.1286 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/gre_mt_inst_1585/Z  60.7300  61.8586       -1.1286  (VIOLATED) 
+
+    Net: core/n1320
+    max_capacitance     60.2722
+  - Capacitance         61.3922
+  --------------------------------
+    Slack               -1.1200 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[27][20]/QN  60.2722  61.3922  -1.1200 (VIOLATED)
+
+    Net: core/n866
+    max_capacitance     25.3296
+  - Capacitance         26.4185
+  --------------------------------
+    Slack               -1.0889 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1210/ZN     25.3296        26.4185        -1.0889  (VIOLATED) 
+
+    Net: core/n3377
+    max_capacitance     23.2315
+  - Capacitance         24.3062
+  --------------------------------
+    Slack               -1.0747 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U985/ZN      23.2315        24.3062        -1.0747  (VIOLATED) 
+
+    Net: core/n3196
+    max_capacitance     23.2315
+  - Capacitance         24.1641
+  --------------------------------
+    Slack               -0.9326 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1375/ZN     23.2315        24.1641        -0.9326  (VIOLATED) 
+
+    Net: core/n746
+    max_capacitance     25.3296
+  - Capacitance         26.2322
+  --------------------------------
+    Slack               -0.9026 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U966/ZN      25.3296        26.2322        -0.9026  (VIOLATED) 
+
+    Net: core/CPU_Xreg_value_a4_CDR1[8][4]
+    max_capacitance     60.7300
+  - Capacitance         61.6204
+  --------------------------------
+    Slack               -0.8904 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[8][4]/Q  60.7300  61.6204  -0.8904 (VIOLATED)
+
+    Net: core/n3193
+    max_capacitance     23.2315
+  - Capacitance         24.1192
+  --------------------------------
+    Slack               -0.8877 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1351/ZN     23.2315        24.1192        -0.8877  (VIOLATED) 
+
+    Net: core/n3441
+    max_capacitance     23.2315
+  - Capacitance         24.1106
+  --------------------------------
+    Slack               -0.8791 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1088/ZN     23.2315        24.1106        -0.8791  (VIOLATED) 
+
+    Net: core/n398_CDR1
+    max_capacitance     14.4959
+  - Capacitance         15.3557
+  --------------------------------
+    Slack               -0.8598 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U498/ZN      14.4959        15.3557        -0.8598  (VIOLATED) 
+
+    Net: core/n3087
+    max_capacitance     23.2315
+  - Capacitance         24.0765
+  --------------------------------
+    Slack               -0.8450 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1557/ZN     23.2315        24.0765        -0.8450  (VIOLATED) 
+
+    Net: core/n3236
+    max_capacitance     23.2315
+  - Capacitance         24.0764
+  --------------------------------
+    Slack               -0.8449 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1430/ZN     23.2315        24.0764        -0.8449  (VIOLATED) 
+
+    Net: core/n359_CDR1
+    max_capacitance     24.6048
+  - Capacitance         25.4361
+  --------------------------------
+    Slack               -0.8313 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U448/ZN      24.6048        25.4361        -0.8313  (VIOLATED) 
+
+    Net: core/n3198
+    max_capacitance     23.2315
+  - Capacitance         23.9462
+  --------------------------------
+    Slack               -0.7147 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1391/ZN     23.2315        23.9462        -0.7147  (VIOLATED) 
+
+    Net: core/n3595
+    max_capacitance     31.7383
+  - Capacitance         32.4084
+  --------------------------------
+    Slack               -0.6701 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1498/ZN     31.7383        32.4084        -0.6701  (VIOLATED) 
+
+    Net: core/n869
+    max_capacitance     25.3296
+  - Capacitance         25.9371
+  --------------------------------
+    Slack               -0.6075 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1215/ZN     25.3296        25.9371        -0.6075  (VIOLATED) 
+
+    Net: core/CPU_Xreg_value_a4[10][10]
+    max_capacitance     60.7300
+  - Capacitance         61.2468
+  --------------------------------
+    Slack               -0.5168 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[10][10]/Q  60.7300  61.2468  -0.5168 (VIOLATED)
+
+    Net: core/gre_net_151
+    max_capacitance     60.7300
+  - Capacitance         61.2427
+  --------------------------------
+    Slack               -0.5127 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/gre_mt_inst_1419/Z  60.7300  61.2427       -0.5127  (VIOLATED) 
+
+    Net: core/gre_net_144
+    max_capacitance     60.7300
+  - Capacitance         61.2011
+  --------------------------------
+    Slack               -0.4711 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/gre_mt_inst_1412/Z  60.7300  61.2011       -0.4711  (VIOLATED) 
+
+    Net: core/ZBUF_2_9
+    max_capacitance     60.7300
+  - Capacitance         61.1145
+  --------------------------------
+    Slack               -0.3845 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/ZBUF_2_inst_489/Z  60.7300  61.1145        -0.3845  (VIOLATED) 
+
+    Net: core/n1458
+    max_capacitance     60.2722
+  - Capacitance         60.6308
+  --------------------------------
+    Slack               -0.3586 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[3][2]/QN  60.2722  60.6308  -0.3586 (VIOLATED)
+
+    Net: core/n1257
+    max_capacitance     60.2722
+  - Capacitance         60.5786
+  --------------------------------
+    Slack               -0.3064 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[18][8]/QN  60.2722  60.5786  -0.3064 (VIOLATED)
+
+    Net: core/n3404
+    max_capacitance     23.2315
+  - Capacitance         23.5037
+  --------------------------------
+    Slack               -0.2722 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1525/ZN     23.2315        23.5037        -0.2722  (VIOLATED) 
+
+    Net: core/n3488
+    max_capacitance     23.2315
+  - Capacitance         23.4326
+  --------------------------------
+    Slack               -0.2011 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U863/ZN      23.2315        23.4326        -0.2011  (VIOLATED) 
+
+    Net: core/n3515
+    max_capacitance     23.2315
+  - Capacitance         23.4036
+  --------------------------------
+    Slack               -0.1721 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1129/ZN     23.2315        23.4036        -0.1721  (VIOLATED) 
+
+    Net: core/n630
+    max_capacitance     26.0162
+  - Capacitance         26.1568
+  --------------------------------
+    Slack               -0.1406 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/ctmTdsLR_1_1217/ZN  26.0162  26.1568       -0.1406  (VIOLATED) 
+
+    Net: core/HFSNET_64
+    max_capacitance    121.4600
+  - Capacitance        121.6003
+  --------------------------------
+    Slack               -0.1404 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/HFSBUF_2402_66/Z 121.4600  121.6003        -0.1404  (VIOLATED) 
+
+    Net: core/n3293
+    max_capacitance     23.2315
+  - Capacitance         23.3703
+  --------------------------------
+    Slack               -0.1388 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1385/ZN     23.2315        23.3703        -0.1388  (VIOLATED) 
+
+    Net: core/n3528
+    max_capacitance     23.2315
+  - Capacitance         23.3590
+  --------------------------------
+    Slack               -0.1275 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1181/ZN     23.2315        23.3590        -0.1275  (VIOLATED) 
+
+    Net: core/gre_net_170
+    max_capacitance     60.7300
+  - Capacitance         60.8553
+  --------------------------------
+    Slack               -0.1253 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/gre_mt_inst_1438/Z  60.7300  60.8553       -0.1253  (VIOLATED) 
+
+    Net: core/n3141
+    max_capacitance     23.2315
+  - Capacitance         23.3482
+  --------------------------------
+    Slack               -0.1167 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1443/ZN     23.2315        23.3482        -0.1167  (VIOLATED) 
+
+    Net: core/n1362
+    max_capacitance     60.2722
+  - Capacitance         60.3585
+  --------------------------------
+    Slack               -0.0863 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/CPU_Xreg_value_a4_reg[18][29]/QN  60.2722  60.3585  -0.0863 (VIOLATED)
+
+    Net: core/n3475
+    max_capacitance     23.2315
+  - Capacitance         23.2595
+  --------------------------------
+    Slack               -0.0280 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U968/ZN      23.2315        23.2595        -0.0280  (VIOLATED) 
+
+    Net: core/n3276
+    max_capacitance     23.2315
+  - Capacitance         23.2481
+  --------------------------------
+    Slack               -0.0166 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : core/U1537/ZN     23.2315        23.2481        -0.0166  (VIOLATED) 
+
+  ---------------------------------------------------------------------------
+   Number of max_capacitance violation(s): 99
+
+
+
+   Total number of violation(s): 111
+1

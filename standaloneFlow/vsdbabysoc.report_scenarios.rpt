@@ -1,0 +1,13 @@
+****************************************
+Report : scenario
+Design : vsdbabysoc_1
+Version: T-2022.03
+Date   : Wed Sep 14 01:08:46 2022
+****************************************
+
+                                                                     Leakage  Dynamic                              Cell  Signal
+Name            Mode            Corner          Active  Setup  Hold  Power    Power    Max_tran  Max_cap  Min_cap  EM    EM
+-------------------------------------------------------------------------------------------------------------------------------
+func1 *         func1           func1           true    true   true  true     true     true      true     false    false false
+
+1

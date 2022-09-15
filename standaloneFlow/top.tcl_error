@@ -1,0 +1,53 @@
+File path issues resolved, 
+
+Following Error is not yet resolved.
+
+Warning: Nothing implicitly matched 'bg_ena_buf' (SEL-003)
+Warning: Nothing implicitly matched 'comp_ninputsrc_buf' (SEL-003)
+Warning: Nothing implicitly matched 'comp_pinputsrc_buf' (SEL-003)
+Error: Errors in the pad cell list
+      	Use error_info for more info. (CMD-013)
+Information: script '/home/skandha/KUNAL/icc2_workshop_collaterals/standaloneFlow/pad_placement_constraints.tcl'
+            	stopped at line 46 due to error. (CMD-081)
+Extended error info:
+Errors in the pad cell list
+    while executing
+"create_io_guide -name "io_guide_r" -side right -pad_cells { analog_out_sel_buf bg_ena_buf comp_ena_buf comp_in_buf comp_ninputsrc_buf comp_pinputsrc_b..."
+    (file "/home/skandha/KUNAL/icc2_workshop_collaterals/standaloneFlow/pad_placement_constraints.tcl" line 46)
+ -- End Extended Error Info
+
+Tried Solutions
+1.Provided seperate names for each io_guide in the create_io_guide command of .tcl file --- NOt solved
+before changing command was 
+
+ create_io_guide -side right -pad_cells { analog_out_sel_buf bg_ena_buf comp_ena_buf comp_in_buf comp_ninputsrc_buf comp_pinputsrc_buf ext_clk_buf ext_clk_sel_buf ext_reset_buf flash_clk_buf flash_csb_buf } -line {{ 1701 1402} 1101}
+
+After Changing
+
+create_io_guide -name "io_guide_r" -side right -pad_cells { analog_out_sel_buf bg_ena_buf comp_ena_buf comp_in_buf comp_ninputsrc_buf comp_pinputsrc_buf ext_clk_buf ext_clk_sel_buf ext_reset_buf flash_clk_buf flash_csb_buf } -line {{ 1701 1402} 1101}
+
+2. Checked whether the list of pads in the list are all set with the attributes, Yes all the cells are present. 
+3. Checked for syntax of set_attribute command, It is as below
+
+
+ /////////command in .tcl file//////////////
+set_attribute -objects [get_cells analog_out_sel_buf ] -name physical_status -value placed  
+
+
+ /////////command model in solvnet//////////////
+define_user_attribute -type int -classes cell X
+
+set_attribute [get_cells *] X 30
+
+Should we change accordingly? Or is it not an issue?
+
+4. All the cels are given same name in the set_attribute command as below,
+set_attribute -objects [get_cells analog_out_sel_buf ] -name physical_status -value placed
+set_attribute -objects [get_cells bg_ena_buf ] -name physical_status -value placed
+set_attribute -objects [get_cells comp_ena_buf ] -name physical_status -value placed
+set_attribute -objects [get_cells comp_in_buf ] -name physical_status -value placed
+...............................
+Should we change the name physical_status for each cell?(bez warning from the tool is Nothing implicitly matched 'bg_ena_buf', which is the second cell in the list of set_attribute commands)
+
+Any other possible solutions?
+
