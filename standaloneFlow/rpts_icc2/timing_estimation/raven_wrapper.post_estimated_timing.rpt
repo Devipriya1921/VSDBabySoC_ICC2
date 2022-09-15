@@ -1,0 +1,61 @@
+[icc2-lic Wed Aug 24 15:59:07 2022] Command 'report_timing' requires licenses
+[icc2-lic Wed Aug 24 15:59:07 2022] Attempting to check-out main set of keys directly with queueing
+[icc2-lic Wed Aug 24 15:59:07 2022] Sending count request for 'ICCompilerII' 
+[icc2-lic Wed Aug 24 15:59:07 2022] Count request for 'ICCompilerII' returned 1 
+[icc2-lic Wed Aug 24 15:59:07 2022] Sending check-out request for 'ICCompilerII' (1) with wait option
+[icc2-lic Wed Aug 24 15:59:07 2022] Check-out request for 'ICCompilerII' with wait option succeeded
+[icc2-lic Wed Aug 24 15:59:07 2022] Sending checkout check request for 'ICCompilerII' 
+[icc2-lic Wed Aug 24 15:59:07 2022] Checkout check request for 'ICCompilerII' returned 0 
+[icc2-lic Wed Aug 24 15:59:07 2022] Sending count request for 'ICCompilerII' 
+[icc2-lic Wed Aug 24 15:59:07 2022] Count request for 'ICCompilerII' returned 1 
+[icc2-lic Wed Aug 24 15:59:07 2022] Sending count request for 'ICCompilerII-4' 
+[icc2-lic Wed Aug 24 15:59:07 2022] Count request for 'ICCompilerII-4' returned 1 
+[icc2-lic Wed Aug 24 15:59:07 2022] Sending check-out request for 'ICCompilerII-4' (1) with wait option
+[icc2-lic Wed Aug 24 15:59:07 2022] Check-out request for 'ICCompilerII-4' with wait option succeeded
+[icc2-lic Wed Aug 24 15:59:07 2022] Sending checkout check request for 'ICCompilerII-4' 
+[icc2-lic Wed Aug 24 15:59:07 2022] Checkout check request for 'ICCompilerII-4' returned 0 
+[icc2-lic Wed Aug 24 15:59:07 2022] Sending count request for 'ICCompilerII-4' 
+[icc2-lic Wed Aug 24 15:59:07 2022] Count request for 'ICCompilerII-4' returned 1 
+[icc2-lic Wed Aug 24 15:59:07 2022] Check-out of main set of keys directly with queueing was successful
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -report_by design
+Design : raven_wrapper
+Version: T-2022.03
+Date   : Wed Aug 24 15:59:07 2022
+****************************************
+
+  Startpoint: ext_clk_sel (input port clocked by ext_clk)
+  Endpoint: _20169_ (rising clock gating-check end-point clocked by ext_clk')
+  Mode: func1
+  Corner: estimated_corner
+  Scenario: func1::estimated_corner
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path       Delta Incr     Analysis
+  ----------------------------------------------------------------------------------------------------
+  clock ext_clk (rise edge)                        0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                             0.60      0.60 r
+  ext_clk_sel (in)                                 0.00      0.60 r      0.00
+  ext_clk_sel_buf/DI (PADINC)                      4.23 e    4.83 r ~  -31.75
+  _20169_/B2 (OAI21_X1)                            0.07 e    4.90 r     -0.08        Buff: 2 INV_X2 added
+  data arrival time                                          4.90      -31.83        Delta arrival
+
+  clock ext_clk' (rise edge)                       2.00      2.00
+  clock network delay (ideal)                      0.00      2.00
+  _20169_/A (OAI21_X1)                             0.00      2.00 r      0.00        Buff: Short net
+  library setup time                              -0.00      2.00
+  data required time                                         2.00
+  ----------------------------------------------------------------------------------------------------
+  data required time                                         2.00
+  data arrival time                                         -4.90
+  ----------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                          -2.90
+
+
+1

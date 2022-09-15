@@ -1,0 +1,46 @@
+[icc2-lic Sat Sep 10 22:40:15 2022] Command 'report_qor' requires licenses
+[icc2-lic Sat Sep 10 22:40:15 2022] Attempting to check-out main set of keys directly with queueing
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending count request for 'ICCompilerII' 
+[icc2-lic Sat Sep 10 22:40:15 2022] Count request for 'ICCompilerII' returned 1 
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending check-out request for 'ICCompilerII' (1) with wait option
+[icc2-lic Sat Sep 10 22:40:15 2022] Check-out request for 'ICCompilerII' with wait option succeeded
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending checkout check request for 'ICCompilerII' 
+[icc2-lic Sat Sep 10 22:40:15 2022] Checkout check request for 'ICCompilerII' returned 0 
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending count request for 'ICCompilerII' 
+[icc2-lic Sat Sep 10 22:40:15 2022] Count request for 'ICCompilerII' returned 1 
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending count request for 'ICCompilerII-4' 
+[icc2-lic Sat Sep 10 22:40:15 2022] Count request for 'ICCompilerII-4' returned 1 
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending check-out request for 'ICCompilerII-4' (1) with wait option
+[icc2-lic Sat Sep 10 22:40:15 2022] Check-out request for 'ICCompilerII-4' with wait option succeeded
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending checkout check request for 'ICCompilerII-4' 
+[icc2-lic Sat Sep 10 22:40:15 2022] Checkout check request for 'ICCompilerII-4' returned 0 
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending count request for 'ICCompilerII-4' 
+[icc2-lic Sat Sep 10 22:40:15 2022] Count request for 'ICCompilerII-4' returned 1 
+[icc2-lic Sat Sep 10 22:40:15 2022] Check-out of main set of keys directly with queueing was successful
+****************************************
+Report : qor
+        -summary
+Design : rvmyth
+Version: T-2022.03
+Date   : Sat Sep 10 22:40:15 2022
+****************************************
+
+Timing
+---------------------------------------------------------------------------
+Context                                 WNS            TNS            NVE
+---------------------------------------------------------------------------
+func1::estimated_corner
+                   (Setup)             4.45           0.00              0
+func1              (Setup)             4.34           0.00              0
+Design             (Setup)             4.34           0.00              0
+
+func1              (Hold)             -0.03         -13.49            547
+Design             (Hold)             -0.03         -13.49            547
+---------------------------------------------------------------------------
+
+Miscellaneous
+---------------------------------------------------------------------------
+Cell Area (netlist):                           5159.87
+Cell Area (netlist and physical only):         5159.87
+Nets with DRC Violations:        6
+1

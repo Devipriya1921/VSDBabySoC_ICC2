@@ -1,0 +1,46 @@
+[icc2-lic Wed Aug 24 15:59:08 2022] Command 'report_qor' requires licenses
+[icc2-lic Wed Aug 24 15:59:08 2022] Attempting to check-out main set of keys directly with queueing
+[icc2-lic Wed Aug 24 15:59:08 2022] Sending count request for 'ICCompilerII' 
+[icc2-lic Wed Aug 24 15:59:08 2022] Count request for 'ICCompilerII' returned 1 
+[icc2-lic Wed Aug 24 15:59:08 2022] Sending check-out request for 'ICCompilerII' (1) with wait option
+[icc2-lic Wed Aug 24 15:59:08 2022] Check-out request for 'ICCompilerII' with wait option succeeded
+[icc2-lic Wed Aug 24 15:59:08 2022] Sending checkout check request for 'ICCompilerII' 
+[icc2-lic Wed Aug 24 15:59:08 2022] Checkout check request for 'ICCompilerII' returned 0 
+[icc2-lic Wed Aug 24 15:59:08 2022] Sending count request for 'ICCompilerII' 
+[icc2-lic Wed Aug 24 15:59:08 2022] Count request for 'ICCompilerII' returned 1 
+[icc2-lic Wed Aug 24 15:59:08 2022] Sending count request for 'ICCompilerII-4' 
+[icc2-lic Wed Aug 24 15:59:08 2022] Count request for 'ICCompilerII-4' returned 1 
+[icc2-lic Wed Aug 24 15:59:08 2022] Sending check-out request for 'ICCompilerII-4' (1) with wait option
+[icc2-lic Wed Aug 24 15:59:08 2022] Check-out request for 'ICCompilerII-4' with wait option succeeded
+[icc2-lic Wed Aug 24 15:59:08 2022] Sending checkout check request for 'ICCompilerII-4' 
+[icc2-lic Wed Aug 24 15:59:08 2022] Checkout check request for 'ICCompilerII-4' returned 0 
+[icc2-lic Wed Aug 24 15:59:08 2022] Sending count request for 'ICCompilerII-4' 
+[icc2-lic Wed Aug 24 15:59:08 2022] Count request for 'ICCompilerII-4' returned 1 
+[icc2-lic Wed Aug 24 15:59:08 2022] Check-out of main set of keys directly with queueing was successful
+****************************************
+Report : qor
+        -summary
+Design : raven_wrapper
+Version: T-2022.03
+Date   : Wed Aug 24 15:59:08 2022
+****************************************
+
+Timing
+---------------------------------------------------------------------------
+Context                                 WNS            TNS            NVE
+---------------------------------------------------------------------------
+func1::estimated_corner
+                   (Setup)            -2.90       -3075.39           2444
+func1              (Setup)       -453287.88    -2432929.56           2454
+Design             (Setup)       -453287.88    -2432929.56           2454
+
+func1              (Hold)            -27.61       -4616.11           1013
+Design             (Hold)            -27.61       -4616.11           1013
+---------------------------------------------------------------------------
+
+Miscellaneous
+---------------------------------------------------------------------------
+Cell Area (netlist):                        1293261.49
+Cell Area (netlist and physical only):      1293261.49
+Nets with DRC Violations:     5474
+1

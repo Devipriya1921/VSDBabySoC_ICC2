@@ -1,0 +1,106 @@
+[icc2-lic Sat Sep 10 22:40:15 2022] Command 'report_qor' requires licenses
+[icc2-lic Sat Sep 10 22:40:15 2022] Attempting to check-out main set of keys directly with queueing
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending count request for 'ICCompilerII' 
+[icc2-lic Sat Sep 10 22:40:15 2022] Count request for 'ICCompilerII' returned 1 
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending check-out request for 'ICCompilerII' (1) with wait option
+[icc2-lic Sat Sep 10 22:40:15 2022] Check-out request for 'ICCompilerII' with wait option succeeded
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending checkout check request for 'ICCompilerII' 
+[icc2-lic Sat Sep 10 22:40:15 2022] Checkout check request for 'ICCompilerII' returned 0 
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending count request for 'ICCompilerII' 
+[icc2-lic Sat Sep 10 22:40:15 2022] Count request for 'ICCompilerII' returned 1 
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending count request for 'ICCompilerII-4' 
+[icc2-lic Sat Sep 10 22:40:15 2022] Count request for 'ICCompilerII-4' returned 1 
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending check-out request for 'ICCompilerII-4' (1) with wait option
+[icc2-lic Sat Sep 10 22:40:15 2022] Check-out request for 'ICCompilerII-4' with wait option succeeded
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending checkout check request for 'ICCompilerII-4' 
+[icc2-lic Sat Sep 10 22:40:15 2022] Checkout check request for 'ICCompilerII-4' returned 0 
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending count request for 'ICCompilerII-4' 
+[icc2-lic Sat Sep 10 22:40:15 2022] Count request for 'ICCompilerII-4' returned 1 
+[icc2-lic Sat Sep 10 22:40:15 2022] Check-out of main set of keys directly with queueing was successful
+****************************************
+Report : qor
+Design : rvmyth
+Version: T-2022.03
+Date   : Sat Sep 10 22:40:15 2022
+****************************************
+
+
+Scenario           'func1::estimated_corner'
+Timing Path Group  '**in2reg_default**'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:              5.00
+Critical Path Slack:               4.45
+Critical Path Clk Period:         10.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+----------------------------------------
+
+Scenario           'func1::estimated_corner'
+Timing Path Group  'MYCLK'
+----------------------------------------
+Levels of Logic:                     41
+Critical Path Length:              3.01
+Critical Path Slack:               6.44
+Critical Path Clk Period:         10.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+----------------------------------------
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:              0
+Hierarchical Port Count:              0
+Leaf Cell Count:                   2330
+Buf/Inv Cell Count:                 130
+Buf Cell Count:                      41
+Inv Cell Count:                      89
+CT Buf/Inv Cell Count:                0
+Combinational Cell Count:          1631
+   Single-bit Isolation Cell Count:                        0
+   Multi-bit Isolation Cell Count:                         0
+   Isolation Cell Banking Ratio:                           0.00%
+   Single-bit Level Shifter Cell Count:                    0
+   Multi-bit Level Shifter Cell Count:                     0
+   Level Shifter Cell Banking Ratio:                       0.00%
+   Single-bit ELS Cell Count:                              0
+   Multi-bit ELS Cell Count:                               0
+   ELS Cell Banking Ratio:                                 0.00%
+Sequential Cell Count:              699
+   Integrated Clock-Gating Cell Count:                     0
+   Sequential Macro Cell Count:                            0
+   Single-bit Sequential Cell Count:                       699
+   Multi-bit Sequential Cell Count:                        0
+   Sequential Cell Banking Ratio:                          0.00%
+   BitsPerflop:                                            1.00
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:             1998.99
+Noncombinational Area:          3160.88
+Buf/Inv Area:                     83.79
+Total Buffer Area:                32.98
+Total Inverter Area:              50.81
+Macro/Black Box Area:              0.00
+Net Area:                             0
+Net XLength:                    3819.98
+Net YLength:                    1895.89
+----------------------------------------
+Cell Area (netlist):                           5159.87
+Cell Area (netlist and physical only):         5159.87
+Net Length:                     5715.86
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:              3170
+Nets with Violations:                 6
+Max Trans Violations:                 2
+Max Cap Violations:                   5
+----------------------------------------
+
+1

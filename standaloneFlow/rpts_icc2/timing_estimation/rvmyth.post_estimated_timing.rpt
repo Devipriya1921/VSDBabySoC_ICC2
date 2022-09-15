@@ -1,0 +1,61 @@
+[icc2-lic Sat Sep 10 22:40:15 2022] Command 'report_timing' requires licenses
+[icc2-lic Sat Sep 10 22:40:15 2022] Attempting to check-out main set of keys directly with queueing
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending count request for 'ICCompilerII' 
+[icc2-lic Sat Sep 10 22:40:15 2022] Count request for 'ICCompilerII' returned 1 
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending check-out request for 'ICCompilerII' (1) with wait option
+[icc2-lic Sat Sep 10 22:40:15 2022] Check-out request for 'ICCompilerII' with wait option succeeded
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending checkout check request for 'ICCompilerII' 
+[icc2-lic Sat Sep 10 22:40:15 2022] Checkout check request for 'ICCompilerII' returned 0 
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending count request for 'ICCompilerII' 
+[icc2-lic Sat Sep 10 22:40:15 2022] Count request for 'ICCompilerII' returned 1 
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending count request for 'ICCompilerII-4' 
+[icc2-lic Sat Sep 10 22:40:15 2022] Count request for 'ICCompilerII-4' returned 1 
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending check-out request for 'ICCompilerII-4' (1) with wait option
+[icc2-lic Sat Sep 10 22:40:15 2022] Check-out request for 'ICCompilerII-4' with wait option succeeded
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending checkout check request for 'ICCompilerII-4' 
+[icc2-lic Sat Sep 10 22:40:15 2022] Checkout check request for 'ICCompilerII-4' returned 0 
+[icc2-lic Sat Sep 10 22:40:15 2022] Sending count request for 'ICCompilerII-4' 
+[icc2-lic Sat Sep 10 22:40:15 2022] Count request for 'ICCompilerII-4' returned 1 
+[icc2-lic Sat Sep 10 22:40:15 2022] Check-out of main set of keys directly with queueing was successful
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -report_by design
+Design : rvmyth
+Version: T-2022.03
+Date   : Sat Sep 10 22:40:15 2022
+****************************************
+
+  Startpoint: reset (input port clocked by MYCLK)
+  Endpoint: CPU_reset_a1_reg (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: estimated_corner
+  Scenario: func1::estimated_corner
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path       Delta Incr     Analysis
+  ----------------------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      3.00      3.00
+  input external delay                             5.00      8.00 f
+  reset (in)                                       0.00      8.00 f      0.00
+  CPU_reset_a1_reg/D (DFF_X1)                      0.00 e    8.00 f      0.00
+  data arrival time                                          8.00        0.00        Delta arrival
+
+  clock MYCLK (rise edge)                         10.00     10.00
+  clock network delay (ideal)                      3.00     13.00
+  CPU_reset_a1_reg/CK (DFF_X1)                     0.00     13.00 r      0.00
+  clock uncertainty                               -0.50     12.50
+  library setup time                              -0.04     12.46
+  data required time                                        12.46
+  ----------------------------------------------------------------------------------------------------
+  data required time                                        12.46
+  data arrival time                                         -8.00
+  ----------------------------------------------------------------------------------------------------
+  slack (MET)                                                4.45
+
+
+1

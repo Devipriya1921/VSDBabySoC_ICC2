@@ -1,0 +1,32 @@
+****************************************
+Report : report_macro_constraints
+Design : raven_wrapper
+Version: T-2022.03
+Date   : Thu Sep  8 12:32:43 2022
+****************************************
+
+
+  macro 		allowed     			   legal
+  name  		orientations			   orientations
+  -----------------------------------------------------------------------
+  sram
+         		all                                all
+
+
+
+  macro 		preferred
+  name  		location
+  -----------------------------------------------------------------------
+
+
+  macro   	R0 grid   R0 alignment 	R90 grid   R90 alignment
+  name    	name      point        	name       point
+  -----------------------------------------------------------------------
+
+
+  macro   	R0 align pins   	R90 align pins 
+  name    	to tracks       	to tracks     
+  -----------------------------------------------------------------------
+  sram
+          	false             	false
+1

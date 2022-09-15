@@ -1,0 +1,18 @@
+****************************************
+Report : report_pin_placement
+Design : vsdbabysoc_1
+Version: T-2022.03
+Date   : Wed Sep 14 02:05:30 2022
+****************************************
+block vsdbabysoc_1 pin OUT[9] layer metal2 side 4 offset 45.22
+block vsdbabysoc_1 pin OUT[8] layer metal2 side 4 offset 133.76
+block vsdbabysoc_1 pin OUT[7] layer metal2 side 4 offset 222.3
+block vsdbabysoc_1 pin OUT[6] layer metal3 side 3 offset 45.78
+block vsdbabysoc_1 pin OUT[5] layer metal3 side 3 offset 134.4
+block vsdbabysoc_1 pin OUT[4] layer metal3 side 3 offset 223.02
+block vsdbabysoc_1 pin OUT[3] layer metal2 side 2 offset 222.49
+block vsdbabysoc_1 pin OUT[2] layer metal2 side 2 offset 135.66
+block vsdbabysoc_1 pin OUT[1] layer metal2 side 2 offset 45.41
+block vsdbabysoc_1 pin OUT[0] layer metal3 side 1 offset 221.62
+block vsdbabysoc_1 pin reset layer metal3 side 1 offset 133
+block vsdbabysoc_1 pin CLK layer metal3 side 1 offset 44.38

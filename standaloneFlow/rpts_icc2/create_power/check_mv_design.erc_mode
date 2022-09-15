@@ -1,0 +1,103 @@
+[icc2-lic Wed Sep 14 02:05:30 2022] Command 'check_mv_design' requires licenses
+[icc2-lic Wed Sep 14 02:05:30 2022] Attempting to check-out main set of keys directly with queueing
+[icc2-lic Wed Sep 14 02:05:30 2022] Sending count request for 'ICCompilerII' 
+[icc2-lic Wed Sep 14 02:05:30 2022] Count request for 'ICCompilerII' returned 1 
+[icc2-lic Wed Sep 14 02:05:30 2022] Sending check-out request for 'ICCompilerII' (1) with wait option
+[icc2-lic Wed Sep 14 02:05:30 2022] Check-out request for 'ICCompilerII' with wait option succeeded
+[icc2-lic Wed Sep 14 02:05:30 2022] Sending checkout check request for 'ICCompilerII' 
+[icc2-lic Wed Sep 14 02:05:30 2022] Checkout check request for 'ICCompilerII' returned 0 
+[icc2-lic Wed Sep 14 02:05:30 2022] Sending count request for 'ICCompilerII' 
+[icc2-lic Wed Sep 14 02:05:30 2022] Count request for 'ICCompilerII' returned 1 
+[icc2-lic Wed Sep 14 02:05:30 2022] Sending count request for 'ICCompilerII-4' 
+[icc2-lic Wed Sep 14 02:05:30 2022] Count request for 'ICCompilerII-4' returned 1 
+[icc2-lic Wed Sep 14 02:05:30 2022] Sending check-out request for 'ICCompilerII-4' (1) with wait option
+[icc2-lic Wed Sep 14 02:05:30 2022] Check-out request for 'ICCompilerII-4' with wait option succeeded
+[icc2-lic Wed Sep 14 02:05:30 2022] Sending checkout check request for 'ICCompilerII-4' 
+[icc2-lic Wed Sep 14 02:05:30 2022] Checkout check request for 'ICCompilerII-4' returned 0 
+[icc2-lic Wed Sep 14 02:05:30 2022] Sending count request for 'ICCompilerII-4' 
+[icc2-lic Wed Sep 14 02:05:30 2022] Count request for 'ICCompilerII-4' returned 1 
+[icc2-lic Wed Sep 14 02:05:30 2022] Check-out of main set of keys directly with queueing was successful
+****************************************
+Report : check_mv_design
+        -erc_mode
+        -voltage_threshold 0
+Design : vsdbabysoc_1
+Version: T-2022.03
+Date   : Wed Sep 14 02:05:30 2022
+****************************************
+
+---------- Power domain rule ----------
+No errors or warnings.
+
+---------- Supply set rule ----------
+No errors or warnings.
+
+---------- Supply net rule ----------
+No errors or warnings.
+
+---------- Supply port rule ----------
+No errors or warnings.
+
+---------- Isolation strategy rule ----------
+No errors or warnings.
+
+---------- Level shifter strategy rule ----------
+No errors or warnings.
+
+---------- Retention strategy rule ----------
+No errors or warnings.
+
+---------- Power switch strategy rule ----------
+No errors or warnings.
+
+---------- Repeater rule ----------
+No errors or warnings.
+
+---------- Terminal boundary rule ----------
+No errors or warnings.
+
+---------- Isolation cell rule ----------
+No errors or warnings.
+
+---------- Level shifter cell rule ----------
+No errors or warnings.
+
+---------- Retention cell rule ----------
+No errors or warnings.
+
+---------- Switch cell rule ----------
+No errors or warnings.
+
+---------- PGMUX rule ----------
+No errors or warnings.
+
+---------- Diode cell rule ----------
+No errors or warnings.
+
+---------- Model rule ----------
+No errors or warnings.
+
+---------- Isolation rule ----------
+No errors or warnings.
+
+---------- Voltage shifting rule ----------
+No errors or warnings.
+
+---------- Tie-off connection rule ----------
+No errors or warnings.
+
+---------- Analog net rule ----------
+No errors or warnings.
+
+---------- Physical block pin rule ----------
+No errors or warnings.
+
+---------- PG pin rule ----------
+No errors or warnings.
+
+---------- Signal pin rule ----------
+No errors or warnings.
+
+---------- Summary ----------
+Information: Total 0 error(s) and 0 warning(s) from check_mv_design. (MV-082)
+1

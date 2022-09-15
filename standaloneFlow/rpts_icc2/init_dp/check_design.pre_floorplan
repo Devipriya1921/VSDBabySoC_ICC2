@@ -1,0 +1,47 @@
+[icc2-lic Wed Sep 14 01:08:46 2022] Command 'check_design' requires licenses
+[icc2-lic Wed Sep 14 01:08:46 2022] Sending authorization request for 'ICCompilerII'
+[icc2-lic Wed Sep 14 01:08:46 2022] Authorization request for 'ICCompilerII' succeeded
+[icc2-lic Wed Sep 14 01:08:46 2022] Sending authorization request for 'ICCompilerII-4'
+[icc2-lic Wed Sep 14 01:08:46 2022] Authorization request for 'ICCompilerII-4' succeeded
+[icc2-lic Wed Sep 14 01:08:46 2022] Sending authorization request for 'ICCompilerII-8'
+[icc2-lic Wed Sep 14 01:08:46 2022] Authorization request for 'ICCompilerII-8' failed (-5)
+[icc2-lic Wed Sep 14 01:08:46 2022] Sending authorization request for 'ICCompilerII-NX'
+[icc2-lic Wed Sep 14 01:08:46 2022] Authorization request for 'ICCompilerII-NX' failed (-5)
+[icc2-lic Wed Sep 14 01:08:46 2022] Attempting to check-out main set of keys directly with queueing
+[icc2-lic Wed Sep 14 01:08:46 2022] Sending count request for 'ICCompilerII' 
+[icc2-lic Wed Sep 14 01:08:46 2022] Count request for 'ICCompilerII' returned 0 
+[icc2-lic Wed Sep 14 01:08:46 2022] Sending check-out request for 'ICCompilerII' (1) with wait option
+[icc2-lic Wed Sep 14 01:08:46 2022] Check-out request for 'ICCompilerII' with wait option succeeded
+[icc2-lic Wed Sep 14 01:08:46 2022] Sending checkout check request for 'ICCompilerII' 
+[icc2-lic Wed Sep 14 01:08:46 2022] Checkout check request for 'ICCompilerII' returned 0 
+[icc2-lic Wed Sep 14 01:08:46 2022] Sending count request for 'ICCompilerII' 
+[icc2-lic Wed Sep 14 01:08:46 2022] Count request for 'ICCompilerII' returned 1 
+[icc2-lic Wed Sep 14 01:08:46 2022] Sending count request for 'ICCompilerII-4' 
+[icc2-lic Wed Sep 14 01:08:46 2022] Count request for 'ICCompilerII-4' returned 0 
+[icc2-lic Wed Sep 14 01:08:46 2022] Sending check-out request for 'ICCompilerII-4' (1) with wait option
+[icc2-lic Wed Sep 14 01:08:46 2022] Check-out request for 'ICCompilerII-4' with wait option succeeded
+[icc2-lic Wed Sep 14 01:08:46 2022] Sending checkout check request for 'ICCompilerII-4' 
+[icc2-lic Wed Sep 14 01:08:46 2022] Checkout check request for 'ICCompilerII-4' returned 0 
+[icc2-lic Wed Sep 14 01:08:46 2022] Sending count request for 'ICCompilerII-4' 
+[icc2-lic Wed Sep 14 01:08:46 2022] Count request for 'ICCompilerII-4' returned 1 
+[icc2-lic Wed Sep 14 01:08:46 2022] Check-out of main set of keys directly with queueing was successful
+****************************************
+ Report : check_design 
+ Options: { dp_pre_floorplan }
+ Design : vsdbabysoc_1
+ Version: T-2022.03
+ Date   : Wed Sep 14 01:08:46 2022
+****************************************
+
+Running atomic-check 'dp_pre_floorplan'
+
+  *** EMS Message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Total 0 EMS messages : 0 errors, 0 warnings, 0 info.
+  ----------------------------------------------------------------------------------------------------
+
+  *** Non-EMS message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Total 0 non-EMS messages : 0 errors, 0 warnings, 0 info.
+  ----------------------------------------------------------------------------------------------------
+1

@@ -1,0 +1,545 @@
+VERSION 5.8 ;
+BUSBITCHARS "[]" ;
+
+UNITS
+  DATABASE MICRONS 2000 ;
+END UNITS
+
+MANUFACTURINGGRID 0.005 ;
+
+LAYER metal1
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  PITCH 0.14 ;
+  WIDTH 0.07 ;
+  PROPERTY LEF58_WIDTH "WIDTH 0.07 WRONGDIRECTION ;" ;
+END metal1
+
+LAYER via1
+  TYPE CUT ;
+END via1
+
+LAYER metal2
+  TYPE ROUTING ;
+  DIRECTION VERTICAL ;
+  PITCH 0.19 ;
+  WIDTH 0.07 ;
+  PROPERTY LEF58_WIDTH "WIDTH 0.07 WRONGDIRECTION ;" ;
+END metal2
+
+LAYER via2
+  TYPE CUT ;
+END via2
+
+LAYER metal3
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  PITCH 0.14 ;
+  WIDTH 0.07 ;
+  PROPERTY LEF58_WIDTH "WIDTH 0.07 WRONGDIRECTION ;" ;
+END metal3
+
+LAYER via3
+  TYPE CUT ;
+END via3
+
+LAYER metal4
+  TYPE ROUTING ;
+  DIRECTION VERTICAL ;
+  PITCH 0.28 ;
+  WIDTH 0.14 ;
+  PROPERTY LEF58_WIDTH "WIDTH 0.14 WRONGDIRECTION ;" ;
+END metal4
+
+LAYER via4
+  TYPE CUT ;
+END via4
+
+LAYER metal5
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  PITCH 0.28 ;
+  WIDTH 0.14 ;
+  PROPERTY LEF58_WIDTH "WIDTH 0.14 WRONGDIRECTION ;" ;
+END metal5
+
+LAYER via5
+  TYPE CUT ;
+END via5
+
+LAYER metal6
+  TYPE ROUTING ;
+  DIRECTION VERTICAL ;
+  PITCH 0.28 ;
+  WIDTH 0.14 ;
+  PROPERTY LEF58_WIDTH "WIDTH 0.14 WRONGDIRECTION ;" ;
+END metal6
+
+LAYER via6
+  TYPE CUT ;
+END via6
+
+LAYER metal7
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  PITCH 0.8 ;
+  WIDTH 0.4 ;
+  PROPERTY LEF58_WIDTH "WIDTH 0.4 WRONGDIRECTION ;" ;
+END metal7
+
+LAYER via7
+  TYPE CUT ;
+END via7
+
+LAYER metal8
+  TYPE ROUTING ;
+  DIRECTION VERTICAL ;
+  PITCH 0.8 ;
+  WIDTH 0.4 ;
+  PROPERTY LEF58_WIDTH "WIDTH 0.4 WRONGDIRECTION ;" ;
+END metal8
+
+LAYER via8
+  TYPE CUT ;
+END via8
+
+LAYER metal9
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  PITCH 1.6 ;
+  WIDTH 0.8 ;
+  PROPERTY LEF58_WIDTH "WIDTH 0.8 WRONGDIRECTION ;" ;
+END metal9
+
+LAYER via9
+  TYPE CUT ;
+END via9
+
+LAYER metal10
+  TYPE ROUTING ;
+  DIRECTION VERTICAL ;
+  PITCH 1.6 ;
+  WIDTH 0.8 ;
+  PROPERTY LEF58_WIDTH "WIDTH 0.8 WRONGDIRECTION ;" ;
+END metal10
+
+LAYER poly
+  TYPE MASTERSLICE ;
+END poly
+
+LAYER active
+  TYPE MASTERSLICE ;
+END active
+
+VIA via1_4
+  LAYER metal1 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+  LAYER via1 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal2 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+END via1_4
+
+VIA via1_0
+  LAYER metal1 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER via1 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal2 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+END via1_0
+
+VIA via1_1
+  LAYER metal1 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER via1 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal2 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+END via1_1
+
+VIA via1_3
+  LAYER metal1 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+  LAYER via1 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal2 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+END via1_3
+
+VIA via1_5
+  LAYER metal1 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+  LAYER via1 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal2 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+END via1_5
+
+VIA via2_8
+  LAYER metal2 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+  LAYER via2 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal3 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+END via2_8
+
+VIA via2_5
+  LAYER metal2 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+  LAYER via2 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal3 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+END via2_5
+
+VIA via2_6
+  LAYER metal2 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+  LAYER via2 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal3 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+END via2_6
+
+VIA via2_0
+  LAYER metal2 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER via2 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal3 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+END via2_0
+
+VIA via2_1
+  LAYER metal2 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER via2 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal3 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+END via2_1
+
+VIA via3_2
+  LAYER metal3 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+  LAYER via3 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal4 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+END via3_2
+
+VIA via3_0
+  LAYER metal3 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER via3 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal4 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+END via3_0
+
+VIA via4_0
+  LAYER metal4 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER via4 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER metal5 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+END via4_0
+
+VIA via5_0
+  LAYER metal5 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER via5 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER metal6 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+END via5_0
+
+VIA via6_0
+  LAYER metal6 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER via6 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER metal7 ;
+    RECT -0.2 -0.2 0.2 0.2 ;
+END via6_0
+
+VIA via7_0
+  LAYER metal7 ;
+    RECT -0.2 -0.2 0.2 0.2 ;
+  LAYER via7 ;
+    RECT -0.2 -0.2 0.2 0.2 ;
+  LAYER metal8 ;
+    RECT -0.2 -0.2 0.2 0.2 ;
+END via7_0
+
+VIA via8_0
+  LAYER metal8 ;
+    RECT -0.2 -0.2 0.2 0.2 ;
+  LAYER via8 ;
+    RECT -0.2 -0.2 0.2 0.2 ;
+  LAYER metal9 ;
+    RECT -0.4 -0.4 0.4 0.4 ;
+END via8_0
+
+VIA via9_0
+  LAYER metal9 ;
+    RECT -0.4 -0.4 0.4 0.4 ;
+  LAYER via9 ;
+    RECT -0.4 -0.4 0.4 0.4 ;
+  LAYER metal10 ;
+    RECT -0.4 -0.4 0.4 0.4 ;
+END via9_0
+
+VIA Via1Array-0
+  LAYER metal1 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER via1 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal2 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+END Via1Array-0
+
+VIA Via1Array-1
+  LAYER metal1 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+  LAYER via1 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal2 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+END Via1Array-1
+
+VIA Via1Array-1_Enc
+  LAYER metal1 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+  LAYER via1 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal2 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+END Via1Array-1_Enc
+
+VIA Via1Array-2
+  LAYER metal1 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+  LAYER via1 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal2 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+END Via1Array-2
+
+VIA Via1Array-2_Enc
+  LAYER metal1 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+  LAYER via1 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal2 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+END Via1Array-2_Enc
+
+VIA Via1Array-3
+  LAYER metal1 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+  LAYER via1 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal2 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+END Via1Array-3
+
+VIA Via1Array-3_Enc
+  LAYER metal1 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+  LAYER via1 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal2 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+END Via1Array-3_Enc
+
+VIA Via1Array-4
+  LAYER metal1 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+  LAYER via1 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal2 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+END Via1Array-4
+
+VIA Via1Array-4_Enc
+  LAYER metal1 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+  LAYER via1 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal2 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+END Via1Array-4_Enc
+
+VIA Via2Array-0
+  LAYER metal2 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER via2 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal3 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+END Via2Array-0
+
+VIA Via2Array-1
+  LAYER metal2 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+  LAYER via2 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal3 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+END Via2Array-1
+
+VIA Via2Array-1_Enc
+  LAYER metal2 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+  LAYER via2 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal3 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+END Via2Array-1_Enc
+
+VIA Via2Array-2
+  LAYER metal2 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+  LAYER via2 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal3 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+END Via2Array-2
+
+VIA Via2Array-2_Enc
+  LAYER metal2 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+  LAYER via2 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal3 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+END Via2Array-2_Enc
+
+VIA Via2Array-3
+  LAYER metal2 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+  LAYER via2 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal3 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+END Via2Array-3
+
+VIA Via2Array-3_Enc
+  LAYER metal2 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+  LAYER via2 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal3 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+END Via2Array-3_Enc
+
+VIA Via2Array-4
+  LAYER metal2 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+  LAYER via2 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal3 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+END Via2Array-4
+
+VIA Via2Array-4_Enc
+  LAYER metal2 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+  LAYER via2 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal3 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+END Via2Array-4_Enc
+
+VIA Via3Array-0
+  LAYER metal3 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER via3 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal4 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+END Via3Array-0
+
+VIA Via3Array-1
+  LAYER metal3 ;
+    RECT -0.035 -0.07 0.035 0.07 ;
+  LAYER via3 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal4 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+END Via3Array-1
+
+VIA Via3Array-2
+  LAYER metal3 ;
+    RECT -0.07 -0.035 0.07 0.035 ;
+  LAYER via3 ;
+    RECT -0.035 -0.035 0.035 0.035 ;
+  LAYER metal4 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+END Via3Array-2
+
+VIA Via4Array-0
+  LAYER metal4 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER via4 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER metal5 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+END Via4Array-0
+
+VIA Via5Array-0
+  LAYER metal5 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER via5 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER metal6 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+END Via5Array-0
+
+VIA Via6Array-0
+  LAYER metal6 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER via6 ;
+    RECT -0.07 -0.07 0.07 0.07 ;
+  LAYER metal7 ;
+    RECT -0.2 -0.2 0.2 0.2 ;
+END Via6Array-0
+
+VIA Via7Array-0
+  LAYER metal7 ;
+    RECT -0.2 -0.2 0.2 0.2 ;
+  LAYER via7 ;
+    RECT -0.2 -0.2 0.2 0.2 ;
+  LAYER metal8 ;
+    RECT -0.2 -0.2 0.2 0.2 ;
+END Via7Array-0
+
+VIA Via8Array-0
+  LAYER metal8 ;
+    RECT -0.2 -0.2 0.2 0.2 ;
+  LAYER via8 ;
+    RECT -0.2 -0.2 0.2 0.2 ;
+  LAYER metal9 ;
+    RECT -0.4 -0.4 0.4 0.4 ;
+END Via8Array-0
+
+VIA Via9Array-0
+  LAYER metal9 ;
+    RECT -0.4 -0.4 0.4 0.4 ;
+  LAYER via9 ;
+    RECT -0.4 -0.4 0.4 0.4 ;
+  LAYER metal10 ;
+    RECT -0.4 -0.4 0.4 0.4 ;
+END Via9Array-0
+
+SITE unit
+  CLASS CORE ;
+  SYMMETRY Y ;
+  SIZE 0.19 BY 1.4 ;
+END unit
+
+END LIBRARY
