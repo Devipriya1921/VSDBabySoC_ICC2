@@ -9,16 +9,35 @@ VSDBabySoC is a small SoC including PLL, DAC, and a RISCV-based processor named 
   - [PLL](#pll)
   - [DAC](#dac)
 - [VSDBabySoC Modeling](#vsdbabysoc-modeling)
-- [Steps to follow for the OpenLane flow](#steps-to-follow-for-the-openlane-flow)
-  - [OpenLANE installation](#openlane-installation)
-  - [Pre-Synthesis Simulation](pre-synthesis-simulation)
-  - [Post-Synthesis Simulation](#post-synthesis-simulation)
-  - [Static timing analysis using OpenSTA](#static-timing-analysis-using-opensta)
-  - [VSDBabySoC and TestBench GTKWave](#vsdbabysoc-and-testbench-gtkwave)
-- [Synthesis of VSDBabySoC using Design Compiler](#synthesis-of-vsdbabysoc-using-design-compiler)
-  - [Core Block Diagram and Schematic](#core-block-diagram-and-schematic)
-  - [Pre-Synthesis Simulation](#pre-synthesis-simulation)
-  - [Post-Synthesis Simulation](#post-synthesis-simulation)
+- [RVMYTH Modeling](#rvmyth-modeling)
+- [DAC Modeling](#dac-modeling)
+- [PLL Modeling](pll-modeling)
+- [Getting Started with VSDBabySoC](getting-started-with-vsdbabysoc)
+- [IC Compiler II](ic-compiler-ii)
+  - [ICC Design Planning Overview](icc-design-planning-overview)
+     - [Design planning](#design-planning)
+     - [Milkyway Reference Libraries](milkyway-reference-libraries)
+     - [Technology File](#technology-file)
+     - [Design Flow](#design-flow)
+     - [Hierarchical Design Planning Flow](#hierarchical-design-planning-flow)
+        - [Design Partitioning](#design-partitioning)
+        - [Deciding on the Physical Partitions](#deciding-on-the-physical-partitions)
+  - [Design Planning at Multiple Levels of Physical Hierarchy](#design-planning-at-multiple-levels-of-physical-hierarchy)
+     - [Data Model](#data-model)
+     - [Block Shaping](#block-shaping)
+     - [Cell and Macro Placement](#cell-and-macro-placement)
+     - [Power Planning](#power-planning)
+     - [Pin Placement](#pin-planning)
+     - [Timing Budgeting](#timing-budgeting)
+  - [Design Validation During Design Planning](#design-validation-during-design-planning)
+- [RVMYTH CORE](#rvmyth-core)
+  - [Synthesis](#synthesis)
+  - [Schematic](#schematic)
+  - [Performing Physical Design](#performing-physical-design)
+  - [Start gui](#start-gui)
+  - [RVMYTH core in VSDBabySoC](#rvmyth-core-in-vsdbabysoc)
+- [Outputs generated](#outputs-generated)
+- [Violations and Future Work](#violations-and-future-work)
 - [Acknowledgements](#acknowledgements)
 - [Author](#author)
 
@@ -130,7 +149,6 @@ NOTE : You can check the contents of top.tcl in the files provided in repository
 
 ![IC Compiler II Anchor in Synopsys Design Platform](https://user-images.githubusercontent.com/83152452/190413796-9000e5ae-2ffc-4704-b418-fee5395c3e4d.png)
 
-
 IC Compiler II is the industry leading place and route solution that delivers best-in-class quality-of-results (QoR) for next-generation designs across all market verticals and 
 process technologies while enabling unprecedented productivity. IC Compiler II includes innovative for flat and hierarchical design planning, early design exploration, congestion 
 aware placement and optimization, clock tree synthesis, advanced node routing convergence, manufacturing compliance, and signoff closure.
@@ -168,7 +186,9 @@ and select the optimal power plan.
 
 The IC Compiler II tool supports complete hierarchical design planning for both channeled and abutted layout styles.
 
-### Design planning in the IC Compiler II tool provides the following features for developing hierarchical and flat designs, such as :
+### Design planning 
+
+IC Compiler II tool provides the following features for developing hierarchical and flat designs, such as :
 
 • Multi-Level Physical Hierarchy Floorplanning
 • Advanced abstraction management for processing large designs
@@ -194,9 +214,9 @@ Information is stored in “views”, for example:
 variable.
 
 
-### Technology File (.tf file)
+### Technology File 
 
-Tech File is unique to each technology.
+Tech File(.tf file) is unique to each technology.
 
 Contains metal layer technology parameters like :
 
@@ -230,7 +250,7 @@ minSpacing = 0.23
 ```
 
 
-### Flow
+### Design Flow
 
 ![icc design planning flow](https://user-images.githubusercontent.com/83152452/190413963-65903c08-7ec9-4411-ace0-0ae4febb736e.png)
 
@@ -824,7 +844,7 @@ save_lib -all
 ```
 
 
-## start_gui
+## Start gui
 
 Once the ```top.tcl``` file is run, type ```start_gui``` in ```icc2_shell``` and you will observe the following:
 
@@ -895,7 +915,7 @@ Here are the pictures showing the standard cells placed :
 ```
 
 
-# Violations and errors
+# Violations and Future Work
 
 1. Type the following command in ```icc2_shell``` once the layout is generated:
 
@@ -958,7 +978,6 @@ This path shows that the regular buffer in clock path due to inavailability of c
 ![violations-1](https://user-images.githubusercontent.com/83152452/190431132-f5b92aec-0294-482f-bcbe-a276d5d60138.jpeg)
 
 ![violations-2](https://user-images.githubusercontent.com/83152452/190431152-a0119713-c5ca-43f8-92ea-463d6f099fe5.jpeg)
-
 
 
 # Acknowledgements
