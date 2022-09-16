@@ -643,6 +643,7 @@ The steps includes:
 ####################################
 
 ## Start gui
+```
 
 Once the ```top.tcl``` file is run, type ```start_gui``` in ```icc2_shell``` and you will observe the following:
 
